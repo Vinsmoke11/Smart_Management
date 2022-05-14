@@ -1,0 +1,9 @@
+{
+    "id" : 1,
+    "modello" : "i3",
+    "marca" : "bmw",
+    "prezzo" : 30000,
+    "carrozzeria" : "utilitaria",
+    "posti" : 5,
+    "autonomia" : 350
+}

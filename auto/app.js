@@ -106,22 +106,12 @@ let app = Vue.createApp({
             autonomia : 200,
         }
     },
-    methods : {
-        verificaCondizioni(a){
-            res = true;
-            if(marca != '' && marca != a.marca){
-                res = false;
-            }
-            else if(carrozzeria != '' && carrozzeria != a.carrozzeria){
-                res = false;
-            }
-            else if(posti != 0 && posti != a.posti){
-                res = false;
-            }
-            else if(autonomia != 200 && autonomia < a.autonomia){
-                res = false;
-            }
-            return res;
+    computed : {
+        condizioni(){
+            return this.automobili.filter(a => (a.marca == this.marca || this.marca == "")&&
+                                                (a.tipo == this.carrozzeria || this.carrozzeria=="")&&
+                                                (a.posti == this.posti || this.posti == 0)&&
+                                                (a.autonomia >= this.autonomia))
         }
     }
 });

@@ -22,9 +22,9 @@ let app = Vue.createApp({
                 descrizione: "Sportività e lusso nella versione elettrica della gemella di BMW serie 4.",
                 posti: 4,
                 autonomia: 400,
-                prezzo: 50000,
-                price : "50.000,00",
-                tipo: "berlina"
+                prezzo: 60000,
+                price : "60.000,00",
+                tipo: "coupe"
             },
             {
                 id : 3,
@@ -72,7 +72,7 @@ let app = Vue.createApp({
                 autonomia: 630,
                 prezzo: 105000,
                 price: "105.000,00",
-                tipo: "berlina"
+                tipo: "coupe"
             },
             {
                 id : 7,
@@ -84,7 +84,7 @@ let app = Vue.createApp({
                 autonomia: 570,
                 prezzo: 115000,
                 price: "115.000,00",
-                tipo: "suv"
+                tipo: "crossover"
             },
             {
                 id : 8,
@@ -97,6 +97,66 @@ let app = Vue.createApp({
                 prezzo: 27000,
                 price: "27.000,00",
                 tipo: "utilitaria"
+            },
+            {
+                id : 9,
+                marca : "TESLA",
+                modello : "MODEL 3",
+                foto : "../immagini/model3.jpg",
+                descrizione: "Modello entry level di Tesla, berlina comfort e con linee sinuose",
+                posti: 5,
+                autonomia: 450,
+                prezzo: 54000,
+                price: "54.000,00",
+                tipo: "Berlina"
+            },
+            {
+                id : 10,
+                marca : "TESLA",
+                modello : "ROADSTER",
+                foto : "../immagini/roadster.webp",
+                descrizione: "La prima super car elettrica in grado di percorrere lo 0-100km/h in meno di 2 secondi.",
+                posti: 2,
+                autonomia: 340,
+                prezzo: 120000,
+                price: "120.000,00",
+                tipo: "supercar"
+            },
+            {
+                id : 11,
+                marca : "AUDI",
+                modello : "E-TRON GT",
+                foto : "../immagini/etrongt.jpg",
+                descrizione: "Come dichiarato da casa madre Audi le prestazioni e l'estetica di E-Tron GT non hanno eguali.",
+                posti: 5,
+                autonomia: 470,
+                prezzo: 105000,
+                price: "105.000,00",
+                tipo: "supercar"
+            },
+            {
+                id : 12,
+                marca : "AUDI",
+                modello : "E-TRON",
+                foto : "../immagini/etrons.jpg",
+                descrizione: "Il primo SUV Audi 100% elettrico in grado di offrire esperienze di guida mai provate prima.",
+                posti: 5,
+                autonomia: 450,
+                prezzo: 89000,
+                price: "89.000,00",
+                tipo: "suv"
+            },
+            {
+                id : 13,
+                marca : "MERCEDES",
+                modello : "EQA",
+                foto : "../immagini/eqa.webp",
+                descrizione: "La stella dalle tre punte fa il suo debutto nel mondo dell'elettrico con questo meraviglioso cross-over.",
+                posti: 5,
+                autonomia: 420,
+                prezzo: 51000,
+                price: "51.000,00",
+                tipo: "crossover"
             }],
             pmin : 0,
             pmax : 500000,
@@ -111,7 +171,8 @@ let app = Vue.createApp({
             return this.automobili.filter(a => (a.marca == this.marca || this.marca == "")&&
                                                 (a.tipo == this.carrozzeria || this.carrozzeria=="")&&
                                                 (a.posti == this.posti || this.posti == 0)&&
-                                                (a.autonomia >= this.autonomia))
+                                                (a.autonomia >= this.autonomia)&&
+                                                (a.prezzo >= this.pmin && a.prezzo <= this.pmax))
         }
     }
 });

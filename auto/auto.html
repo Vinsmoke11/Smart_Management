@@ -97,7 +97,17 @@
                   </div>
               </div>
               <!--Menu auto-->
-              <div class="col-md">
+              <div class="col-md mainMenuBackground">
+                <div class="row">
+                  <div class="btn-toolbar justify-content-end" role="toolbar" aria-label="Toolbar with button groups">
+                    <label class="lead mt-2">Ordina per: </label>
+                    <div class="btn-group m-2" role="group" aria-label="First group">
+                      <button type="button" class="btn btn-primary" @click="sortPcresc">Prezzo crescente</button>
+                      <button type="button" class="btn btn-primary" @click="sortPdec">Prezzo decrescente</button>
+                      <button type="button" class="btn btn-primary" @click="sortPosti">Posti</button>
+                      <button type="button" class="btn btn-primary" @click="sortAut">Autonomia</button>
+                    </div>
+                </div>
                 <div class="row">
                   <div v-if="!condizioni.length">
                     <div class="container-md m-3">

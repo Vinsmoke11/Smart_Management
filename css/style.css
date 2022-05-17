@@ -5,6 +5,13 @@
     background-position: center center;
     background-size: cover;
 }
+.mainMenuBackground{
+    background-image: url("https://i.pinimg.com/originals/52/fe/b6/52feb6ce0f78701667f41120b3cca0ea.jpg");
+    background-repeat: no-repeat;
+    background-attachment: scroll;
+    background-position: center center;
+    background-size: cover;
+}
 .mylead {
     font-size: 30px;
     font-weight: 300;

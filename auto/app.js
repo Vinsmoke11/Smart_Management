@@ -164,6 +164,7 @@ let app = Vue.createApp({
             carrozzeria : '',
             posti: 0,
             autonomia : 200,
+            condition : this.modello
         }
     },
     computed : {
@@ -172,7 +173,21 @@ let app = Vue.createApp({
                                                 (a.tipo == this.carrozzeria || this.carrozzeria=="")&&
                                                 (a.posti == this.posti || this.posti == 0)&&
                                                 (a.autonomia >= this.autonomia)&&
-                                                (a.prezzo >= this.pmin && a.prezzo <= this.pmax))
+                                                (a.prezzo >= this.pmin && a.prezzo <= this.pmax));
+        }
+    },
+    methods : {
+        sortPcresc(){
+            return this.automobili.sort(function(a , b){return a.prezzo - b.prezzo;});
+        },
+        sortPdec : function(){
+            return this.automobili.sort(function(a, b){return b.prezzo - a.prezzo;})
+        },
+        sortAut : function(){
+            return this.automobili.sort(function(a, b){return b.autonomia - a.autonomia;})
+        },
+        sortPosti : function(){
+            return this.automobili.sort(function(a, b){return a.posti - b.posti;})
         }
     }
 });

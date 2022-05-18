@@ -1,13 +1,14 @@
 .mainSection{
-    background-image: url("https://img.wallpapersafari.com/desktop/1920/1080/21/87/Ud2VAi.jpg");
+    background-image: url("https://wallpaper.dog/large/20429583.jpg");
     background-repeat: no-repeat;
-    background-attachment: scroll;
+    background-attachment: fixed;
     background-position: center center;
     background-size: cover;
 }
 .mylead {
     font-size: 30px;
     font-weight: 300;
+    color: white;
 }
 a.nav-link:hover{
     text-decoration: underline;
@@ -31,8 +32,27 @@ border-bottom-right-radius: 0.7rem !important;
     border-radius: 1rem;
 }
 
-@media (max-width: 992px) {
-.rounded-lg-5 {
-    border-radius: 0.5rem !important;
+.carousel .carousel-inner img {
+    width: 100%;
+    height: 55vh;
+    object-fit: cover;
+    overflow: hidden;
 }
+
+@media (min-width: 768px) {
+    .rounded-md-5 {
+        border-radius: 0.5rem !important;
+    }
+
+    .mr-md-5{
+        margin-right: 3rem;
+    }
+
+    .mt-md-7{
+        margin-top: 5rem;
+    }
+
+    .position-md-fixed{
+        position: fixed;
+    }
 }

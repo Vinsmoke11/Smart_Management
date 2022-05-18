@@ -6,6 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="../css/bootstrap.css">
     <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="news_style.css">
     <title>Notizia</title>
 </head>
 <body>
@@ -46,10 +47,14 @@
                     La piccola e iconica torinese registra nel tragitto classico Roma-Forlì (con temperature invernali) un consumo medio di 15,9 kWh/100 km che equivalgono a una percorrenza di 6,29 km/kWh e a una spesa per la ricarica domestica di 12,93 euro. Affidandosi invece alla rete di stazioni di ricarica ad alta potenza HPC come Ionity il prezzo dello stesso viaggio sale a 45,22 euro. L"autonomia su questo percorso è di circa 230 km.</p>
                 <h4>Al centro della classifica consumi</h4>
                 <p>Messa a confronto con le altre auto elettriche presenti nella classifica consumi reali, la Fiat 500 elettrica da 118 CV si posiziona attorno alla metà della graduatoria, a pari merito con la Kia e-Soul e davanti a Opel Corsa-e appaiata a Volkswagen ID.3 (17,2 kWh/100 km - 5,8 km/kWh), solo per rimanere tra le EV compatte.</p>
-                <img src="http://www.ferrajoliauto.it/wpa/uploads/ecommerce/1000/48/1609350138.jpg" alt="Fiat 500e" class="w-100 mb-3 shadow">
+                <img id="myImg" src="http://www.ferrajoliauto.it/wpa/uploads/ecommerce/1000/48/1609350138.jpg" alt="Fiat 500e" class="w-100 mb-3">
+                <div class="modal-mio" id="myModal">
+                    <img class="modal-content-mio" id="im">
+                    <div id="caption"></div>
+                </div>
                 <p>Meglio della nuova Fiat 500 Elettrica hanno invece fatto la Tesla Model 3 Standard Range Plus nella stessa stagione invernale (14,7 kWh/100 km - 6,8 km/kWh), la Nissan Leaf 40 kWh (13,1 kWh/100 km - 7,6 km/kWh), la Hyundai Kona Electric 64 kWh (12,0 kWh/100 km - 8,3 km/kWh) e la regina Renault Zoe Intens R135 provata in estate e capace di toccare gli 11,0 kWh/100 km (9,0 km/kWh).</p>
                 <h4>Qualità, comfort, stile iconico e tecnologia ...in piccolo</h4>
-                <p>ALa Fiat 500 elettrica in prova è una ricca versione Icon + con alcuni optional come la vernice metallizzata tristrato, i cerchi in lega da 17" e i pacchetti Magic Eyes, Style e Comfort. Così accessoriata la 500 a batteria, che è tutta nuova rispetto alla 500 a benzina ed è cresciuta leggermente nelle misure, arriva a costare 37.400 euro, salvo promozioni.
+                <p>La Fiat 500 elettrica in prova è una ricca versione Icon + con alcuni optional come la vernice metallizzata tristrato, i cerchi in lega da 17" e i pacchetti Magic Eyes, Style e Comfort. Così accessoriata la 500 a batteria, che è tutta nuova rispetto alla 500 a benzina ed è cresciuta leggermente nelle misure, arriva a costare 37.400 euro, salvo promozioni.
                     Anche l"abitabilità interna è un po" migliorata, mentre il bagagliaio e lo spazio per i passeggeri posteriori restano limitati. I materiali, il design e le finiture sia esterne che interne sono di ottimo livello e riflettono uno stile iconico e tecnologico al tempo stesso. Connettività, infotainment e ausili alla guida sono evoluti e solo il cruise control adattivo risulta difficile da utilizzare perché forzatamente legato ai limiti di velocità vigenti.Bene il comfort, la tenuta di strada e le prestazioni sempre brillanti, oltre alla silenziosità di marcia, la facilità di manovra e il piacere di guida.</p>
             </article>
         </div>
@@ -81,6 +86,7 @@
             </div>
         </div>
     </div>
-</main>        
+</main>     
+<script src="news_script.js"></script>   
 </body>
 </html>

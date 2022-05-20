@@ -1,4 +1,5 @@
-let app = Vue.createApp({
+
+app = Vue.createApp({
     e1 : '#app',
     data(){
         return{
@@ -12,7 +13,8 @@ let app = Vue.createApp({
                 autonomia: 350,
                 prezzo: 30000,
                 price : "30.000,00",
-                tipo: "utilitaria"
+                tipo: "utilitaria",
+                immagini : ["./daScoprire/i3/i31.jpg","./daScoprire/i3/i32.jpg","./daScoprire/i3/i33.jpg","./daScoprire/i3/i34.jpg","./daScoprire/i3/i35.jpg","./daScoprire/i3/i36.jpg"]
             },
             {
                 id : 2,
@@ -164,7 +166,9 @@ let app = Vue.createApp({
             carrozzeria : '',
             posti: 0,
             autonomia : 200,
-            condition : this.modello
+            show: false,
+            scopri : null,
+            navbaron : true
         }
     },
     computed : {
@@ -188,7 +192,33 @@ let app = Vue.createApp({
         },
         sortPosti : function(){
             return this.automobili.sort(function(a, b){return a.posti - b.posti;})
+        },
+        discover(i){
+            this.show = !this.show;
+            this.scopri = this.automobili[i];
+            this.navbaron = !this.navbaron
+        },
+        showLess(){
+            this.show = !this.show;
+            this.scopri = null;
+            this.navbaron = !this.navbaron
+        },
+        imageZoom(f, index){
+            let pics = document.getElementsByClassName("photo");
+            for(var i = 0; i < pics.length; i++){
+                if(i == index){
+                    pics[i].classList.add("active");
+                }else{
+                    if(pics[i].classList.contains("active")){
+                        pics[i].classList.remove("active")
+                    }
+                }
+            }
+            document.getElementById("frame").innerHTML = "<img src="+f+" class='img-fluid'></img>"
+            document.getElementById("frame").style.height = "100% max-height";
+            document.getElementById("frame").style.width = "100% max-width";
         }
     }
 });
 app.mount('#app');
+

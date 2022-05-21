@@ -46,6 +46,15 @@ border-bottom-right-radius: 0.7rem !important;
     overflow: hidden;
 }
 
+a {
+    color: rgb(38, 196, 91);
+}
+
+a:hover {
+    color: rgb(6, 175, 6);
+}
+
+
 @media (min-width: 768px) {
     .rounded-md-5 {
         border-radius: 0.5rem !important;

@@ -72,3 +72,15 @@ a:hover {
         position: fixed;
     }
 }
+.photo{
+    filter: brightness(0.5);
+}
+.photo:hover,
+.photo.active{
+    filter: brightness(1);
+    box-shadow: 2px 2px 4px black;
+}
+.card:hover{
+    box-shadow: 2px 2px 8px black;
+}
+

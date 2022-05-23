@@ -11,6 +11,7 @@
     background-attachment: scroll;
     background-position: center center;
     background-size: cover;
+    min-height: 100vh;
 }
 .mylead {
     font-size: 30px;

@@ -10,7 +10,7 @@
 }
 
 .modal-mio {
-    display: none;
+    display: block;
     position: fixed;
     z-index: 1100;
     padding-top: 100px;
@@ -40,19 +40,26 @@
     height: 150px;
 }
 
-.close {
+.btn-circle {
     position: absolute;
     top: 15px;
     right: 35px;
     color: #f1f1f1;
-    font-size: 40px;
-    font-weight: bold;
+    background-color: rgb(95, 94, 94);
     transition: 0.3s;
+    line-height: 0px;
+    padding: 12px 0px;
+    height: 30px;
+    width: 30px;
+    border-radius: 50%;
+    font-size: 30px;
+    text-align: center;
 }
 
-.close:hover ,
-.close:focus {
-    color: #bbb;
+.btn-circle:hover ,
+.btn-circle:focus {
+    color: rgb(145, 145, 145);
+    background-color: rgb(58, 58, 58);
     text-decoration: none;
     cursor: pointer;
 }

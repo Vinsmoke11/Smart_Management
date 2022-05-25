@@ -7,6 +7,7 @@
     <link rel="stylesheet" href="css/style.css">
     <link rel="stylesheet" href="css/bootstrap.css">
     <script src="bootstrap.min.js" type="application/javascript"></script>
+    <script src="https://unpkg.com/vue@3"></script>
 </head>
 <body>
     <!--Navbar-->
@@ -34,7 +35,7 @@
         </div>
       </nav>
     <!--Main-->
-    <section class="mainSection">
+    <section class="mainSection" id = app>
         <div class="container">
             <div class="row">
                 <p class="mylead mt-4 mt-sm-2 mt-md-4 text-center">Benvenuti nel nostro sito, siamo sicuri che trovete l'auto elettrica che fa per voi.</p>
@@ -49,7 +50,7 @@
                         </div>
                         <div class="carousel-inner">
                         <div class="carousel-item active">
-                            <a href="/news/notizia1.html" style="text-decoration:none; color: white;">
+                            <a href="/news/notizia.html" style="text-decoration:none; color: white;" @click="cambianotizia(0)">
                             <img src="https://upload.wikimedia.org/wikipedia/commons/8/8a/Fiat-500-vorne2.jpg" class="w-100 rounded-10" alt="...">
                             <div class="carousel-caption" style="text-align:left">
                             <h4>Fiat 500e</h4>
@@ -58,7 +59,7 @@
                             </div>
                         </div>
                         <div class="carousel-item">
-                            <a href="https://www.google.com" style="text-decoration:none; color: white;">
+                            <a href="/news/notizia.html" style="text-decoration:none; color: white;"@click="cambianotizia(1)">
                             <img src="https://cdn.pocket-lint.com/r/s/970x/assets/images/157922-cars-review-audi-e-tron-gt-review-image1-is1tutwhpd.jpg" class="w-100 rounded-10" alt="...">
                             <div class="carousel-caption">
                             <h5>Second slide label</h5>
@@ -67,7 +68,7 @@
                             </a>
                         </div>
                         <div class="carousel-item">
-                            <a href="https://www.google.com" style="text-decoration:none; color: white;">
+                            <a href="/news/notizia.html" style="text-decoration:none; color: white;">
                             <img src="https://www.veicolielettricinews.it/files/2014/03/Schermata-2014-03-18-a-00.31.32.png" class="w-100 rounded-10" alt="...">
                             <div class="carousel-caption">
                             <h5>Third slide label</h5>
@@ -96,7 +97,7 @@
                 <div class="col-lg-4 col-md-12 mb-4 mb-lg-0">
                     <div>
                     <!-- titolo e descrizione -->
-                    <a href="" class="text-dark text-decoration-none">
+                    <a href="/news/notizia.html" class="text-dark text-decoration-none">
                         <h5>This is title of the news</h5>
             
                         <p>
@@ -122,7 +123,7 @@
                     <div>
             
                     <!-- titolo e descrizione -->
-                    <a href="" class="text-dark text-decoration-none">
+                    <a href="/news/notizia.html" class="text-dark text-decoration-none">
                         <h5>This is title of the news</h5>
             
                         <p>
@@ -146,7 +147,7 @@
                 <div class="col-lg-4 col-md-12 mb-4 mb-lg-0">
                     <div>
                     <!-- titolo e descrizione -->
-                    <a href="" class="text-dark text-decoration-none">
+                    <a href="/news/notizia.html" class="text-dark text-decoration-none">
                         <h5>This is title of the news</h5>
             
                         <p>
@@ -171,12 +172,22 @@
             </div>
         </div>
     </section>
+    <!--Mappa colonnine-->
+    <div class="row pt-4 justify-content-center">
+        <div class="col-8 mb-3 ">
+        <h3 >TROVA LA STAZIONE DI RICARICA PIU' VICINA A TE</h3> 
+        </div>
+        <div class="col-lg-8 " style="height: 70vh;">
+        <iframe src="https://map.openchargemap.io/?mode=embedded" allow="geolocation" frameborder="0" width="100%" height="100%"></iframe>    
+        </div> 
+    </div>
     <!--Footer-->
     <div class="container mt-5 p-3">
       <div class="row">
         <div class="text-left text-md-start">
-          <span class="copyright">Copyright &copy; Progetto Linguaggie e tecnologie per il web 2022 Pilla-Pascucci-Cutroni</span>
+          <span class="copyright">Copyright &copy; Progetto Linguaggi e tecnologie per il web 2022 Pilla-Pascucci-Cutroni</span>
       </div>
     </div>
+    <script src="/news/app_news.js" type="application/javascript"></script>
 </body>
 </html>

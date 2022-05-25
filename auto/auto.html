@@ -94,12 +94,14 @@
                         <input type="range" class="form-range" min="200" max="700" step="50" id="autonomiaMin" value="700" v-model="autonomia">
                       </form>
                       <p>Valore selezionato: {{autonomia}} km</p>
+                      <button class="btn btn-success btn-sm m-2" @click="this.navbaron = false">Chiudi</button>
                   </div>
               </div>
               <!--Menu auto-->
               <div class="col-md mainMenuBackground">
                 <div class="row">
-                  <div class="btn-toolbar justify-content-end" role="toolbar" aria-label="Toolbar with button groups" v-if="!show">
+                  <button class="btn btn-success btn-sm m-2 ms-4 col-1" @click="this.navbaron = true" v-if="!navbaron && !show">Filtri</button>
+                  <div class="btn-toolbar justify-content-end col" role="toolbar" aria-label="Toolbar with button groups" v-if="!show">
                     <label class="lead mt-2">Ordina per: </label>
                     <div class="btn-group m-2" role="group" aria-label="First group">
                       <button type="button" class="btn btn-success" @click="sortPcresc">Prezzo crescente</button>
@@ -136,7 +138,7 @@
                             <li class="list-group-item">a partire da: €{{auto.price}}</li>
                             </ul>
                             <div class="card-body">
-                            <button class="btn btn-success btn-md" class="card-link" @click="discover(index)">Scopri di più...</button>
+                            <a class="btn btn-success btn-md" href="#" class="card-link" @click="discover(index)">Scopri di più...</a>
                             </div>
                       </div>
                   </div>
@@ -148,19 +150,27 @@
                           <img :src="foto" alt="" class="card-img-top photo" @click="imageZoom(foto, index)">
                         </div>
                       </div>
-                      <div id="frame">
-                        <img src="" class="img-fluid" alt="">
+                      <div class="row">
+                          <div class="col" id="frame">
+                          </div>
+                          <div class="col mt-4">
+                            <ul>
+                              <h4>Scheda tecnica:</h4>
+                              <li>Marca: <span class="lead">{{scopri.marca}}</span></li>
+                              <li>Modello: <span class="lead">{{scopri.modello}}</span></li>
+                              <li>Tipologia: <span class="lead">{{scopri.tipo}}</span></li>
+                              <li>Prezzo a partire da: <span class="lead">{{scopri.price}}</span></li>
+                              <li>Autonomia: <span class="lead">{{scopri.autonomia}} km</span></li>
+                              <li>Numero di posti: <span class="lead">{{scopri.posti}}</span></li>
+                              <li>Potenza: <span class="lead">{{scopri.potenza}}</span></li>
+                              <li>Performance: <span class="lead">{{scopri.performance}}</span></li>
+                              <li>Dimensioni: <span class="lead">{{scopri.dimensioni}} (cm)</span></li>
+                              <li>Consumo medio: <span class="lead">{{scopri.consumo}}</span></li>
+                              <li>Peso in ordine di marcia: <span class="lead">{{scopri.peso}} kg</span></li>
+                            </ul>
+                          </div>
+                          <p class="lead text-center mt-2">"{{scopri.descrizione}}"</p>
                       </div>
-                      <p class="lead text-center">"{{scopri.descrizione}}"</p>
-                      <ul>
-                        <h4>Scheda tecnica:</h4>
-                        <li>Marca: <span class="lead">{{scopri.marca}}</span></li>
-                        <li>Modello: <span class="lead">{{scopri.modello}}</span></li>
-                        <li>Tipologia: <span class="lead">{{scopri.tipo}}</span></li>
-                        <li>Prezzo a partire da: <span class="lead">{{scopri.price}}</span></li>
-                        <li>Autonomia: <span class="lead">{{scopri.autonomia}} km</span></li>
-                        <li>Numero di posti: <span class="lead">{{scopri.posti}}</span></li>
-                      </ul>
                     </div><hr>
                     <button class="btn btn-success ms-2" @click="showLess">Mostra meno</button>
                   </div>
@@ -168,6 +178,12 @@
               </div>
       </div>
     </section>
+    <div class="container p-3">
+      <div class="row">
+        <div class="text-left text-md-start">
+          <span class="copyright">Copyright &copy; Progetto Linguaggie e tecnologie per il web 2022 Pilla-Pascucci-Cutroni</span>
+      </div>
+    </div>
     <script src="app.js" type="application/javascript"></script>
 </body>
 </html>

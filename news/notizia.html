@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../css/bootstrap.css">
+    <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="news_style.css">
+    <script src="https://unpkg.com/vue@3"></script>
+    <title>Notizia</title>
+</head>
+<body>
+     <!--Navbar-->
+     <nav class="navbar navbar-expand-lg navbar-light bg-light sticky-top">
+        <div class="container-fluid">
+          <img src="../immagini/logo.png" alt="" height="45px">
+          <a class="navbar-brand" href="#">Green Vehicle Demand</a>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+            <div class="navbar-nav">
+              <a class="nav-link active" aria-current="page" href="../index.html">Home</a>
+              <a class="nav-link" href="../auto/auto.html">Le nostre auto</a>
+              <a class="nav-link" href="#">Pricing</a>
+              <a class="nav-link" href="#" tabindex="-1" aria-disabled="true">Disabled</a>
+            </div>
+          <div class="collapse navbar-collapse justify-content-end" id="navbarNavAltMarkup">
+            <div class="navbar-nav">
+                <a class="nav-link">Login</a>
+                <a class="nav-link">Registrati</a>
+            </div>
+          </div>
+          </div>
+        </div>
+      </nav>
+<main class="container" id="app">
+    <div class="row g-5">
+        <div class="col-md-8">
+            <article class="pb-md-4 pt-5 mb-md-4">
+                <h2>{{questanotizia.titolo}}</h2>
+                <p>{{questanotizia.data}}</p>
+
+                <p>{{questanotizia.descrizione}}</p>
+                <hr>
+                <p>{{questanotizia.paragrafo1}}</p>
+                <h4>{{questanotizia.titolo2}}</h4>
+                <p>{{questanotizia.paragrafo2}}</p>
+                <img id="myImg" :src=questanotizia.foto class="w-100 mb-3" @click="openModal()">
+                <div v-if="showModal" class="modal-mio" id="myModal">
+                    <div class="mb-5">
+                    <div class="btn btn-circle"  @click="closeModal()">&times;</div>
+                    </div>
+                    <img class="modal-content-mio" id="im" :src=questanotizia.foto>
+                    <div id="caption">{{questanotizia.alt}}</div>
+                </div>
+                <p>{{questanotizia.paragrafo3}}</p>
+                <h4>{{questanotizia.titolo3}}</h4>
+                <p>{{questanotizia.paragrafo4}}</p>
+            </article>
+        </div>
+        <div class="col-md-4">
+            <div class="position-md-fixed " style="top: 2rem;">
+                <div class="p-4 mt-md-7 mr-md-5 mb-3 bg-light rounded">
+                    <h4>About</h4>
+                    <p class="mb-0" v-if="questanotizia.autore">Scritto da {{questanotizia.autore}}</p>
+                    <p>Pubblicato su <a :href="'https://www.' + questanotizia.sito">{{questanotizia.sito}}</a></p>
+                    <a :href="questanotizia.refarticolo" class="btn btn-outline-success">Vai all'articolo completo</a>
+                </div>
+        
+                <div class="p-4 mt-5 mr-md-5 mb-5 bg-light rounded">
+                    <h4>Tutti gli articoli</h4>
+                    <ol class="list-unstyled">
+                    <li v-for="(notizia, index) in notizie" class="mb-1"><a href="notizia.html" @click="cambianotizia(index)">{{notizia.titolo}}</a></li>
+                    </ol>
+                </div>
+            </div>
+        </div>
+    </div>
+</main>     
+
+<script src="app_news.js" type="application/javascript"></script>
+ 
+</body>
+</html>

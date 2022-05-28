@@ -75,4 +75,12 @@ border-bottom-right-radius: 0.7rem !important;
 .card:hover{
     box-shadow: 2px 2px 8px black;
 }
+.incentiviBackground{
+    background-image: url("https://i.pinimg.com/originals/52/fe/b6/52feb6ce0f78701667f41120b3cca0ea.jpg");
+    background-repeat: no-repeat;
+    background-attachment: scroll;
+    background-position: center center;
+    background-size: cover;
+    min-height: 100vh;
+}
 

@@ -35,7 +35,8 @@
         </div>
       </nav>
     <!--Main-->
-    <section class="mainSection" id = app>
+    <div id="app">
+    <section class="mainSection">
         <div class="container">
             <div class="row">
                 <p class="mylead mt-4 mt-sm-2 mt-md-4 text-center">Benvenuti nel nostro sito, siamo sicuri che trovete l'auto elettrica che fa per voi.</p>
@@ -48,31 +49,12 @@
                         <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="1" aria-label="Slide 2"></button>
                         <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="2" aria-label="Slide 3"></button>
                         </div>
-                        <div class="carousel-inner">
-                        <div class="carousel-item active">
-                            <a href="/news/notizia.html" style="text-decoration:none; color: white;" @click="cambianotizia(0)">
-                            <img src="https://upload.wikimedia.org/wikipedia/commons/8/8a/Fiat-500-vorne2.jpg" class="w-100 rounded-10" alt="...">
-                            <div class="carousel-caption" style="text-align:left">
-                            <h4>Fiat 500e</h4>
-                            <h6>La prova dei consumi reali dell'auto elettrica più venduta in Italia</h6>
-                            </a>
-                            </div>
-                        </div>
-                        <div class="carousel-item">
-                            <a href="/news/notizia.html" style="text-decoration:none; color: white;"@click="cambianotizia(1)">
-                            <img src="https://cdn.pocket-lint.com/r/s/970x/assets/images/157922-cars-review-audi-e-tron-gt-review-image1-is1tutwhpd.jpg" class="w-100 rounded-10" alt="...">
-                            <div class="carousel-caption">
-                            <h5>Second slide label</h5>
-                            <p>Some representative placeholder content for the second slide.</p>
-                            </div>
-                            </a>
-                        </div>
-                        <div class="carousel-item">
-                            <a href="/news/notizia.html" style="text-decoration:none; color: white;">
-                            <img src="https://www.veicolielettricinews.it/files/2014/03/Schermata-2014-03-18-a-00.31.32.png" class="w-100 rounded-10" alt="...">
-                            <div class="carousel-caption">
-                            <h5>Third slide label</h5>
-                            <p>Some representative placeholder content for the third slide.</p>
+                        <div class="carousel-inner" >
+                        <div class="carousel-item" v-for="(notizia,index) in notizie.slice(0,3)" :class="index==0 ? 'active' : ''">
+                            <a href="/news/notizia.html" style="text-decoration:none;" @click="cambianotizia(index)" >
+                            <img :src="notizia.foto" class="w-100 rounded-10">
+                            <div class="carousel-caption" style="text-align:left;">
+                            <h4 style="color: rgb(255, 255, 255);">{{notizia.titolo}}</h4>
                             </a>
                             </div>
                         </div>
@@ -94,17 +76,12 @@
     <section>
         <div class="container mt-4 pt-1" >
             <div class="row pt-3 bg-light rounded">
-                <div class="col-lg-4 col-md-12 mb-4 mb-lg-0">
-                    <div>
+                <div class="col-lg-4 col-md-12 mb-4 mb-lg-1" v-for="(notizia, index) in notizie.slice(3,6)">
                     <!-- titolo e descrizione -->
-                    <a href="/news/notizia.html" class="text-dark text-decoration-none">
-                        <h5>This is title of the news</h5>
+                    <a href="/news/notizia.html" class="text-dark text-decoration-none" @click="cambianotizia(index)">
+                        <h5>{{notizia.titolo}}</h5>
             
-                        <p>
-                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Odit, iste aliquid. Sed
-                        id nihil magni, sint vero provident esse numquam perferendis ducimus dicta
-                        adipisci iusto nam temporibus modi animi laboriosam?
-                        </p>
+                        <p>{{notizia.descrizione}}</p>
                     </a>
                     <!-- data -->
                     <div class="row">
@@ -112,66 +89,15 @@
                         </div>
             
                         <div class="col-6 text-end">
-                        <u> 15.07.2020</u>
+                        <u>{{notizia.data}}</u>
                         </div>
-                    </div>
-                    <hr />
-                    </div>
-                </div>
-
-                <div class="col-lg-4 col-md-12 mb-4 mb-lg-0">
-                    <div>
-            
-                    <!-- titolo e descrizione -->
-                    <a href="/news/notizia.html" class="text-dark text-decoration-none">
-                        <h5>This is title of the news</h5>
-            
-                        <p>
-                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Odit, iste aliquid. Sed
-                        id nihil magni, sint vero provident esse numquam perferendis ducimus dicta
-                        adipisci iusto nam temporibus modi animi laboriosam?
-                        </p>
-                    </a>
-                    <!-- data -->
-                    <div class="row">
-                        <div class="col-6">
-                        </div>
-            
-                        <div class="col-6 text-end">
-                        <u> 15.07.2020</u>
-                        </div>
-                    </div>
-                    <hr />
-                    </div>
-                </div>
-                <div class="col-lg-4 col-md-12 mb-4 mb-lg-0">
-                    <div>
-                    <!-- titolo e descrizione -->
-                    <a href="/news/notizia.html" class="text-dark text-decoration-none">
-                        <h5>This is title of the news</h5>
-            
-                        <p>
-                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Odit, iste aliquid. Sed
-                        id nihil magni, sint vero provident esse numquam perferendis ducimus dicta
-                        adipisci iusto nam temporibus modi animi laboriosam?
-                        </p>
-                    </a>
-                    <!-- data -->
-                    <div class="row">
-                        <div class="col-6">
-                        </div>
-            
-                        <div class="col-6 text-end">
-                        <u> 15.07.2020</u>
-                        </div>
-                    </div>
-            
-                    <hr />
                     </div>
                 </div>
             </div>
+            <hr>
         </div>
     </section>
+    </div>
     <!--Mappa colonnine-->
     <div class="row pt-4 justify-content-center">
         <div class="col-8 mb-3 ">

@@ -9,7 +9,7 @@
     <script src="../bootstrap.min.js" type="application/javascript"></script>
     <script src="https://unpkg.com/vue@3"></script>
 </head>
-<body>
+<body">
     <!--Navbar-->
     <nav class="navbar navbar-expand-lg navbar-dark bg-dark sticky-top">
         <div class="container-fluid">
@@ -33,8 +33,8 @@
         </div>
     </nav>
       <!--Main-->
-    <section class="AutoDisplay" id="app">
-      <div class="row row-cols-2">
+    <section style="overflow: hidden;" id="app">
+      <div class="row">
               <!--Menu ricerca-->
               <div class="col-md-2 bg-light collapse-horizontal navbar-expand-lg" style="height: 100vmax max-content; min-height: 100%;" v-if="navbaron">
                   <div class="container pt-3">
@@ -97,9 +97,9 @@
               </div>
               <!--Menu auto-->
               <div class="col-md mainMenuBackground">
-                <div class="row">
-                  <button class="btn btn-success btn-sm m-2 ms-4 col-1" @click="this.navbaron = true" v-if="!navbaron && !show">Filtri</button>
-                  <div class="btn-toolbar justify-content-end col" role="toolbar" aria-label="Toolbar with button groups" v-if="!show">
+                <div class="row justify-content-md-start justify-content-around">
+                  <button class="btn btn-success btn-sm m-2 ms-md-4 col-10 col-md-1" @click="this.navbaron = true" v-if="!navbaron && !show">Filtri</button>
+                  <div class="btn-toolbar justify-content-center justify-content-md-end col" role="toolbar" aria-label="Toolbar with button groups" v-if="!show">
                     <label class="lead mt-2">Ordina per: </label>
                     <div class="btn-group m-2" role="group" aria-label="First group">
                       <button type="button" class="btn btn-success" @click="sortPcresc">Prezzo crescente</button>
@@ -126,7 +126,7 @@
                     </div>
                   </div>
                   <div class="col m-3" v-for="(auto, index) in condizioni":key="auto.id" v-if="!show">
-                      <div class="card" style="width: 18rem;">
+                      <div class="card mx-auto h-100" style="width: 18rem;">
                             <img v-bind:src="auto.foto" class="card-img-top" alt="...">
                             <div class="card-body">
                             <h5 class="card-title">{{auto.marca}} {{auto.modello}}</h5>

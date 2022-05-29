@@ -9,7 +9,7 @@
     <script src="../bootstrap.min.js" type="application/javascript"></script>
     <script src="https://unpkg.com/vue@3"></script>
 </head>
-<body">
+<body>
     <!--Navbar-->
     <nav class="navbar navbar-expand-lg navbar-dark bg-dark sticky-top">
         <div class="container-fluid">
@@ -36,7 +36,7 @@
     <section style="overflow: hidden;" id="app">
       <div class="row">
               <!--Menu ricerca-->
-              <div class="col-md-2 bg-light collapse-horizontal navbar-expand-lg" style="height: 100vmax max-content; min-height: 100%;" v-if="navbaron">
+              <div class="col col-md-4 col-xl-2 bg-light collapse-horizontal navbar-expand-lg" style="height: 100vmax max-content; min-height: 100%;" v-if="navbaron">
                   <div class="container pt-3">
                       <span class="lead">Filtra per:</span>
                       <form class="mt-3">
@@ -99,7 +99,7 @@
               <div class="col-md mainMenuBackground">
                 <div class="row justify-content-md-start justify-content-around">
                   <button class="btn btn-success btn-sm m-2 ms-md-4 col-10 col-md-1" @click="this.navbaron = true" v-if="!navbaron && !show">Filtri</button>
-                  <div class="btn-toolbar justify-content-center justify-content-md-end col" role="toolbar" aria-label="Toolbar with button groups" v-if="!show">
+                  <div class="btn-toolbar justify-content-center justify-content-lg-end col" role="toolbar" aria-label="Toolbar with button groups" v-if="!show">
                     <label class="lead mt-2">Ordina per: </label>
                     <div class="btn-group m-2" role="group" aria-label="First group">
                       <button type="button" class="btn btn-success" @click="sortPcresc">Prezzo crescente</button>
@@ -127,7 +127,7 @@
                   </div>
                   <div class="col m-3" v-for="(auto, index) in condizioni":key="auto.id" v-if="!show">
                       <div class="card mx-auto h-100" style="width: 18rem;">
-                            <img v-bind:src="auto.foto" class="card-img-top" alt="...">
+                            <img v-bind:src="auto.foto" class="card-img-top">
                             <div class="card-body">
                             <h5 class="card-title">{{auto.marca}} {{auto.modello}}</h5>
                             <p class="card-text">{{auto.descrizione}}</p>
@@ -140,18 +140,21 @@
                             </div>
                       </div>
                   </div>
-                  <div class="container m-3" v-else="">
-                    <p class="lead ms-2 text-sm">Scopri di più su {{scopri.marca}} {{scopri.modello}}:</p><hr>
+                  <div class="container" v-else="">
+                    <p class="lead mt-3 ms-2 text-sm">Scopri di più su {{scopri.marca}} {{scopri.modello}}:</p><hr>
                     <div class="container">
-                      <div class="row row-cols-6"  style="border-radius: 10px;">
-                        <div style="padding: 0;" class="card-group" v-for="(foto, index) in scopri.immagini" id="smallPic">
-                          <img :src="foto" alt="" class="card-img-top photo" @click="imageZoom(foto, index)">
-                        </div>
-                      </div>
                       <div class="row">
-                          <div class="col" id="frame"><img :src="scopri.immagini[0]" style="height: 100%; width: 100%;">
+                          <div class="col-lg-7 mb-3">
+                            <div class="row row-cols-6 mb-2"  style="border-radius: 10px;">
+                              <div style="padding: 0;" class="card-group" v-for="(foto, index) in scopri.immagini" id="smallPic">
+                                <img :src="foto" alt="" class="card-img-top photo" style="height: 80px;" @click="imageZoom(foto, index)">
+                              </div>
+                            </div>
+                            <div id="frame">
+                              <img :src="scopri.immagini[0]" style="width: 100%;">
+                            </div>
                           </div>
-                          <div class="col mt-4">
+                          <div class="col-lg-3 mt-4">
                             <ul>
                               <h4>Scheda tecnica:</h4>
                               <li>Marca: <span class="lead">{{scopri.marca}}</span></li>
@@ -170,7 +173,7 @@
                           <p class="lead text-center mt-2">"{{scopri.descrizione}}"</p>
                       </div>
                     </div><hr>
-                    <button class="btn btn-success ms-2" @click="showLess">Mostra meno</button>
+                    <button class="btn btn-success ms-2 mb-3" @click="showLess">Mostra meno</button>
                   </div>
                 </div>
               </div>

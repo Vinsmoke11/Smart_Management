@@ -49,9 +49,7 @@
                 <p>{{questanotizia.paragrafo2}}</p>
                 <img id="myImg" :src=questanotizia.foto class="w-100 mb-3" @click="openModal()">
                 <div v-if="showModal" class="modal-mio" id="myModal">
-                    <div class="mb-5">
                     <div class="btn btn-circle"  @click="closeModal()">&times;</div>
-                    </div>
                     <img class="modal-content-mio" id="im" :src=questanotizia.foto>
                     <div id="caption">{{questanotizia.alt}}</div>
                 </div>

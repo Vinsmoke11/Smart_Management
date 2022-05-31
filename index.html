@@ -36,39 +36,24 @@
     <!--Main-->
     <div id="app">
     <section class="mainSection">
-        <div class="container">
-            <div class="row">
-                <p class="mylead mt-4 mt-sm-2 mt-md-4 text-center">Benvenuti nel nostro sito, siamo sicuri che trovete l'auto elettrica che fa per voi.</p>
+        <div id="carouselExampleCaptions" class="carousel slide mb-3 carousel-fade" data-bs-ride="carousel" data-interval="3000">
+            <div class="carousel-indicators">
+            <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="0" class="active mx-2" aria-current="true" aria-label="Slide 1"></button>
+            <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="1" class="mx-2" aria-label="Slide 2"></button>
+            <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="2" class="mx-2"aria-label="Slide 3"></button>
             </div>
-            <div class="row justify-content-center">
-                <div class="col-md-8 ">
-                    <div id="carouselExampleCaptions" class="carousel slide mb-5 mt-4 mt-sm-2 mt-md-3" style="max-height: 80;" data-bs-ride="carousel">
-                        <div class="carousel-indicators">
-                        <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
-                        <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="1" aria-label="Slide 2"></button>
-                        <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="2" aria-label="Slide 3"></button>
-                        </div>
-                        <div class="carousel-inner" >
-                        <div class="carousel-item" v-for="(notizia,index) in notizie.slice(0,3)" :class="index==0 ? 'active' : ''">
-                            <a href="/news/notizia.html" style="text-decoration:none;" @click="cambianotizia(index)" >
-                            <img :src="notizia.foto" class="w-100 rounded-10">
-                            <div class="carousel-caption" style="text-align:left;">
+            <div class="carousel-inner" >
+                <div class="carousel-item" v-for="(notizia,index) in notizie.slice(0,3)" :class="index==0 ? 'active' : ''" @click="cambianotizia(index);" style="cursor: pointer;">
+                        <img id="imgCarousel" :src="notizia.foto">
+                        <div class="carousel-caption" style="text-align:left;">
                             <h4 style="color: rgb(255, 255, 255);">{{notizia.titolo}}</h4>
-                            </a>
-                            </div>
                         </div>
-                        </div>
-                        <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="prev">
-                        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-                        <span class="visually-hidden">Previous</span>
-                        </button>
-                        <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="next">
-                        <span class="carousel-control-next-icon" aria-hidden="true"></span>
-                        <span class="visually-hidden">Next</span>
-                        </button>
-                    </div>
                 </div>
             </div>
+            <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="prev">
+            </button>
+            <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="next">
+            </button>
         </div>
     </section>
     <!-- parte news-->
@@ -77,7 +62,7 @@
             <div class="row pt-3 bg-light rounded">
                 <div class="col-lg-4 col-md-12 mb-4 mb-lg-1" v-for="(notizia, index) in notizie.slice(3,6)">
                     <!-- titolo e descrizione -->
-                    <a href="/news/notizia.html" class="text-dark text-decoration-none" @click="cambianotizia(index)">
+                    <a href="/news/notizia.html" class="text-dark text-decoration-none" @click="cambianotizia(index+3)">
                         <h5>{{notizia.titolo}}</h5>
             
                         <p>{{notizia.descrizione}}</p>
@@ -98,12 +83,12 @@
     </section>
     </div>
     <!--Mappa colonnine-->
-    <div class="row pt-4 justify-content-center">
+    <div class="row mt-2 me-0 justify-content-center">
         <div class="col-8 mb-3 ">
         <h3 >TROVA LA STAZIONE DI RICARICA PIU' VICINA A TE</h3> 
         </div>
-        <div class="col-lg-8 " style="height: 70vh;">
-        <iframe src="https://map.openchargemap.io/?mode=embedded" allow="geolocation" frameborder="0" width="100%" height="100%"></iframe>    
+        <div class="col-lg-8 pe-0" style="height: 70vh;">
+        <iframe src="https://map.openchargemap.io/?mode=embedded&longitude=12.492231 &latitude=41.890209" allow="geolocation" frameborder="0" width="100%" height="100%"></iframe>    
         </div> 
     </div>
     <!--Footer-->

@@ -3,7 +3,7 @@ const app = Vue.createApp ({
         return{
             notizie:[{
                 titolo: "Fiat 500 elettrica, la prova dei consumi reali",
-                data: "16 Febbraio 2022",
+                data: "16/02/2022",
                 descrizione: "Veloce, raffinata e tecnologica, la Fiat 500 elettrica è un'icona di stile. Abitabilità e bagagliaio migliorabili, autonomia di 200 km.",
                 paragrafo1: "Eccola finalmente alle prese con la prova consumi reali. La Fiat 500 elettrica è l'auto a batteria più venduta in Italia e una delle più vendute in Europa e anche per questo successo merita un esame approfondito dei consumi e dell'autonomia reale. La piccola e iconica torinese registra nel tragitto classico Roma-Forlì (con temperature invernali) un consumo medio di 15,9 kWh/100 km che equivalgono a una percorrenza di 6,29 km/kWh e a una spesa per la ricarica domestica di 12,93 euro. Affidandosi invece alla rete di stazioni di ricarica ad alta potenza HPC come Ionity il prezzo dello stesso viaggio sale a 45,22 euro. L'autonomia su questo percorso è di circa 230 km.",
                 titolo2: "Al centro della classifica consumi",
@@ -23,7 +23,7 @@ const app = Vue.createApp ({
                 paragrafo1:"I due principali freni alla mobilità elettrica, ormai è noto a tutti, sono l'infrastruttura e le batterie. Il primo aspetto vede i costruttori impegnati nella creazione di reti per la fornitura di servizi di ricarica, anche in partnership con altre realtà magari del settore energetico, ma non pochi i fattori che non dipendono dal settore automobilistico, tra cui la disponibilità di energia pulita o i tempi dei permessi per la costruzione di stazioni e l'installazione delle colonnine. Il secondo aspetto, invece, è legato alle iniziative nel campo della ricerca e sviluppo. A tal proposito, le Case stanno investendo risorse crescenti, non solo su nuovi elementi chimici per ridurre la dipendenza da materie prime quali il litio o il cobalto: per migliorare l’autonomia e i tempi di ricarica, si sta infatti lavorando sulla configurazione delle celle e sulla densità dei materiali utilizzati. Lo sta facendo, per esempio, Mercedes-Benz, che in attesa della tecnologia dello stato solido (soluzioni commerciabili non sono previste prima del 2025) ha annunciato nuovi sviluppi della sua collaborazione con la statunitense Sila.",
                 titolo2: "Il caso Mercedes",
                 paragrafo2: "In sostanza, con la prossima generazione a batteria della Classe G sarà disponibile, come optional, un pacco batterie caratterizzato da anodi ad alto contenuto non più di carbonio, bensì di silicio. In tal modo, secondo la Mercedes- Benz, sarà possibile aumentare la densità energetica degli accumulatori “senza compromettere la sicurezza o altri parametri prestazionali\".",
-                foto: "https://statics.quattroruote.it/content/dam/quattroruote/it/news/industria-finanza/2022/05/23/batterie_da_mercedes_a_tesla_tra_innovazione_e_veri_obiettivi_/gallery/rsmall/22C0067_115.jpg",
+                foto: "https://mbenz.it/foto/2021/08/Mercedes-GROB-partnership-batterie-2-scaled.jpg",
                 alt: "Un piano batterie in produzione nello stabilimento Mercedes di Vance,Al",
                 paragrafo3: "Nello specifico, rispetto alle celle oggi disponibili sul mercato, la nuova tecnologia consente di incrementare la densità del 20-40% superando gli 800 Wh/l (wattora per litro) a livello di singola cella. Dunque, sarà possibile immagazzinare più energia e accrescere “in modo significativo” l’autonomia dei veicoli elettrici. Attenzione, però. Diverse altre aziende, startup o laboratori universitari hanno annunciato simili sviluppi, ma nel caso della Mercedes è la prima volta che viene annunciato un salto tecnologico radicale in tempi stretti: la nuova Classe G, infatti, sarà lanciata entro la fine dell’anno.",
                 titolo3: "Il record di Lucid",
@@ -45,7 +45,7 @@ const app = Vue.createApp ({
             },
             {
                 titolo:"Fisker Ronin, l'elettrica cabrio da 965 km di autonomia (dichiarata)",
-                data:"25 mag 2022",
+                data:"25/05/2022",
                 descrizione:"Fisker ha annunciato  il progetto della GT quattro-posti Ronin, oltre al via alla produzione della compatta Pear. Per la prima, in fase di sviluppo nella nuova struttura “Magic Works” del Regno Unito, l’autonomia mostruosa dichiarata è di quasi mille km (600 miglia). La seconda arriverà sul mercato statunitense con meno di 30 mila dollari",
                 paragrafo:"Una decappottabile quattro posti completamente elettrica, che promette un’autonomia mostruosa di 965 km (600 miglia). L’Ev di Fisker si chiama Ronin e presto avrà la sua realizzazione, dopo che lo scorso 5 maggio, sul profilo ufficiale della casa Usa, ne è stato annunciato il progetto. La vettura sarà a quattro porte. Al momento, però, non si sa ancora nulla riguardo alla potenza, seppur la società abbia rivelato che il modello green avrà un powertrain di tre motori e sarà in grado di fare gli 0-100 km/h in meno di due secondi.",
                 titolo2:"la Ronin sarà svelata ad Agosto",
@@ -59,7 +59,7 @@ const app = Vue.createApp ({
             },
             {
                 titolo:"Hyundai sfida Tesla: costruirà una fabbrica di auto elettriche da 5,5 miliardi negli Stati Uniti",
-                data:"23/05/2022 11:55",
+                data:"23/05/2022",
                 descrizione:"Hyundai Motor Group investirà 5,54 miliardi di dollari per costruire la sua prima fabbrica di veicoli elettrici e batterie negli Stati Uniti. Si aggiungerà così a General Motors, Ford, Volkswagen e altri giganti dell’auto sulla lista di chi vuole scalzare Tesla dal trono di prima azienda di veicoli elettrici al mondo.",
                 paragrafo:"La casa automobilistica di Seul prevede di costruire l’impianto su un sito di 2.923 acri nella contea di Bryan, nello stato della Georgia, vicino alla città portuale di Savannah. La produzione dovrebbe iniziare nella prima metà del 2025. La struttura potrà produrre 300mila veicoli all’anno e dovrebbe impiegare, a regime, più di ottomila persone.",
                 paragrafo2:"“Gli Stati Uniti hanno sempre avuto un ruolo importante nella strategia globale del gruppo”, ha dichiarato Euisun Chung, presidente esecutivo di Hyundai. “Siamo felici di collaborare con lo stato della Georgia per raggiungere un obiettivo condiviso: quello di diffondere la mobilità elettrica e la sostenibilità negli Stati Uniti”. L’impianto sarà il primo stabilimento Hyundai in Nord America dedicato per intero ai veicoli elettrici.",
@@ -73,7 +73,7 @@ const app = Vue.createApp ({
             },
             {
                 titolo:"Il boom delle auto elettriche negli Stati Uniti",
-                data:"19 Maggio 2022",
+                data:"19/05/2022",
                 descrizione:"Nei primi tre mesi del 2022 le immatricolazioni hanno registrato un +60%. E la Casa Bianca ha annunciato un piano da 7,5 miliardi di dollari in 5 anni per creare una rete nazionale di colonnine di ricarica",
                 paragrafo:"AGI - Negli Stati Uniti le immatricolazioni di nuovi veicoli elettrici sono aumentate del 60% nei primi tre mesi del 2022, anche se le immatricolazioni di nuove auto sono diminuite nel complesso del 18%. I veicoli elettrici rappresentano ora il 4,6% di tutte le autovetture vendute negli Stati Uniti. Con 113882 veicoli immatricolati (il 59% del totale), Tesla si prende i primi tre posti della top ten (e anche un settimo posto), con la Tesla Model Y a quota 52.051 immatricolazioni, che stacca la Ford Mustang Mach-E, al quarto posto con 6.957 vetture registrate. Sono alcuni dei dati emersi Experian, multinazionale che si occupa di analisi e informazioni creditizie. Dai dati è emerso che tra gennaio e marzo 2022, i consumatori statunitensi hanno registrato 158.689 veicoli elettrici. Nel 2020 erano state immatricolate 252.548 auto elettriche (+11,1% rispetto al 2019) con quota complessiva del mercato dell'1,8% (1,4% nel 2019). Nonostante i veicoli elettrici  rappresentino una nicchia piccola del mercato dei nuovi veicoli, si stanno gradualmente spostando verso il diventare un prodotto mainstream sulla base degli ultimi dati del settore.",
                 titolo2:"Crescono gli investimenti di venture capita",
@@ -99,6 +99,7 @@ const app = Vue.createApp ({
         cambianotizia(i){
             localStorage.setItem("notiziadacaricare",i);
             console.log("notizia da caricare =",localStorage.getItem("notiziadacaricare"));
+            window.location.href='/news/notizia.html';
         },
         openModal(){
             console.log("click");

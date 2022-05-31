@@ -246,7 +246,7 @@ app = Vue.createApp({
             autonomia : 200,
             show: false,
             scopri : null,
-            navbaron : true
+            navbaron : false
         }
     },
     computed : {

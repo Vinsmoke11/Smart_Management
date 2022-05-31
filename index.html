@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -9,95 +10,156 @@
     <script src="bootstrap.min.js" type="application/javascript"></script>
     <script src="https://unpkg.com/vue@3"></script>
 </head>
+
 <body>
     <!--Navbar-->
     <nav class="navbar navbar-expand-lg navbar-light bg-light sticky-top">
         <div class="container-fluid">
-          <img src="./immagini/logo.png" alt="" height="45px">
-          <a class="navbar-brand" href="#">Green Vehicle Demand</a>
-          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
-            <span class="navbar-toggler-icon"></span>
-          </button>
-          <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
-            <div class="navbar-nav">
-              <a class="nav-link active" aria-current="page" href="#">Home</a>
-              <a class="nav-link" href="auto/auto.php">Le nostre auto</a>
-              <a class="nav-link" href="">Incentivi</a>
-              <a class="nav-link" href="">Chi siamo?</a>
-            </div>
-            <div class="collapse navbar-collapse justify-content-end" id="navbarNavAltMarkup">
+            <img src="./immagini/logo.png" alt="" height="45px">
+            <a class="navbar-brand" href="#">Green Vehicle Demand</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup"
+                aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
                 <div class="navbar-nav">
-                    <a class="nav-link btn border-secondary" style="border-radius: 10px;" href="../personale/welcome.php">Area personale</a>
+                    <a class="nav-link active" aria-current="page" href="#">Home</a>
+                    <a class="nav-link" href="auto/auto.php">Le nostre auto</a>
+                    <a class="nav-link" href="">Incentivi</a>
+                    <a class="nav-link" href="">Chi siamo?</a>
                 </div>
-              </div>
-          </div>
+                <div class="collapse navbar-collapse justify-content-end" id="navbarNavAltMarkup">
+                    <div class="navbar-nav">
+                        <a class="nav-link btn border-secondary" style="border-radius: 10px;"
+                            href="../personale/welcome.php">Area personale</a>
+                    </div>
+                </div>
+            </div>
         </div>
-      </nav>
+    </nav>
     <!--Main-->
     <div id="app">
-    <section class="mainSection">
-        <div id="carouselExampleCaptions" class="carousel slide mb-3 carousel-fade" data-bs-ride="carousel" data-interval="3000">
-            <div class="carousel-indicators">
-            <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="0" class="active mx-2" aria-current="true" aria-label="Slide 1"></button>
-            <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="1" class="mx-2" aria-label="Slide 2"></button>
-            <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="2" class="mx-2"aria-label="Slide 3"></button>
-            </div>
-            <div class="carousel-inner" >
-                <div class="carousel-item" v-for="(notizia,index) in notizie.slice(0,3)" :class="index==0 ? 'active' : ''" @click="cambianotizia(index);" style="cursor: pointer;">
+        <section class="mainSection">
+            <div id="carouselExampleCaptions" class="carousel slide mb-3 carousel-fade" data-bs-ride="carousel"
+                data-interval="3000">
+                <div class="carousel-indicators">
+                    <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="0"
+                        class="active mx-2" aria-current="true" aria-label="Slide 1"></button>
+                    <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="1" class="mx-2"
+                        aria-label="Slide 2"></button>
+                    <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="2" class="mx-2"
+                        aria-label="Slide 3"></button>
+                </div>
+                <div class="carousel-inner">
+                    <div class="carousel-item" v-for="(notizia,index) in notizie.slice(0,3)"
+                        :class="index==0 ? 'active' : ''" @click="cambianotizia(index);" style="cursor: pointer;">
                         <img id="imgCarousel" :src="notizia.foto">
                         <div class="carousel-caption" style="text-align:left;">
                             <h4 style="color: rgb(255, 255, 255);">{{notizia.titolo}}</h4>
                         </div>
+                    </div>
                 </div>
+                <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleCaptions"
+                    data-bs-slide="prev">
+                </button>
+                <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleCaptions"
+                    data-bs-slide="next">
+                </button>
             </div>
-            <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="prev">
-            </button>
-            <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="next">
-            </button>
-        </div>
-    </section>
-    <!-- parte news-->
-    <section>
-        <div class="container mt-4 pt-1" >
-            <div class="row pt-3 bg-light rounded">
-                <div class="col-lg-4 col-md-12 mb-4 mb-lg-1" v-for="(notizia, index) in notizie.slice(3,6)">
-                    <!-- titolo e descrizione -->
-                    <a href="/news/notizia.html" class="text-dark text-decoration-none" @click="cambianotizia(index+3)">
-                        <h5>{{notizia.titolo}}</h5>
-            
-                        <p>{{notizia.descrizione}}</p>
-                    </a>
-                    <!-- data -->
-                    <div class="row">
-                        <div class="col-6">
-                        </div>
-            
-                        <div class="col-6 text-end">
-                        <u>{{notizia.data}}</u>
+        </section>
+        <!-- parte news-->
+        <section>
+            <div class="container mt-4 pt-1">
+                <div class="row pt-3 bg-light rounded">
+                    <div class="col-lg-4 col-md-12 mb-4 mb-lg-1" v-for="(notizia, index) in notizie.slice(3,6)">
+                        <!-- titolo e descrizione -->
+                        <a href="/news/notizia.html" class="text-dark text-decoration-none"
+                            @click="cambianotizia(index+3)">
+                            <h5>{{notizia.titolo}}</h5>
+
+                            <p>{{notizia.descrizione}}</p>
+                        </a>
+                        <!-- data -->
+                        <div class="row">
+                            <div class="col-6">
+                            </div>
+
+                            <div class="col-6 text-end">
+                                <u>{{notizia.data}}</u>
+                            </div>
                         </div>
                     </div>
                 </div>
+                <hr>
             </div>
-            <hr>
-        </div>
-    </section>
+        </section>
     </div>
     <!--Mappa colonnine-->
     <div class="row mt-2 me-0 justify-content-center">
         <div class="col-8 mb-3 ">
-        <h3 >TROVA LA STAZIONE DI RICARICA PIU' VICINA A TE</h3> 
+            <h3>TROVA LA STAZIONE DI RICARICA PIU' VICINA A TE</h3>
         </div>
         <div class="col-lg-8 pe-0" style="height: 70vh;">
-        <iframe src="https://map.openchargemap.io/?mode=embedded&longitude=12.492231 &latitude=41.890209" allow="geolocation" frameborder="0" width="100%" height="100%"></iframe>    
-        </div> 
+            <iframe src="https://map.openchargemap.io/?mode=embedded&longitude=12.492231 &latitude=41.890209"
+                allow="geolocation" frameborder="0" width="100%" height="100%"></iframe>
+        </div>
     </div>
+    <!-- Form Contattaci -->
+    <form id="contattaci" action="https://formspree.io/f/mayvvabv" enctype="text/plain" method="POST">
+        <div class="background">
+            <div class="container">
+                <div class="screen">
+                    <div class="screen-body">
+                        <div class="screen-body-item left">
+                            <div class="app-title">
+                                <span>CONTATTACI</span>
+                            </div>
+                            <div class="app-contact">Per richieste urgenti +39 3209874562</div>
+                        </div>
+                        <div class="screen-body-item">
+                            <div class="app-form">
+                                <div class="app-form-group">
+                                    <input type="text" class="app-form-control" name="nome" placeholder="nome"
+                                        pattern="[a-Z]" required>
+                                </div>
+                                <div class="app-form-group">
+                                    <input type="email" class="app-form-control" name="email" placeholder="email"
+                                        pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$" required>
+                                </div>
+                                <div class="app-form-group">
+                                    <input type="text" class="app-form-control" name="telefono" placeholder="telefono"
+                                        pattern="[0-9]{10}">
+                                </div>
+                                <div class="app-form-group message">
+                                    <input class="app-form-control" name="messaggio" placeholder="messaggio" required>
+                                </div>
+                                <div>
+                                    <input type="checkbox" class="checkbox" name="privacyCheck" id="privacyCheck"
+                                        checked required>
+                                    <label class="app-form-text-color" for="privacy">Accetto <a
+                                            title="Privacy e policy di Green Vehicle Demand" href="./form/privacy.html"
+                                            target="_blank">Termini e condizioni</a></label><br>
+                                </div>
+
+                                <div class="app-form-group buttons">
+                                    <button type="reset" class="app-form-button">Cancella</button>
+                                    <button type="submit" class="app-form-button">Invia</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+    </form>
     <!--Footer-->
     <div class="container mt-5 p-3">
-      <div class="row">
-        <div class="text-left text-md-start">
-          <span class="copyright">Copyright &copy; Progetto Linguaggi e tecnologie per il web 2022 Pilla-Pascucci-Cutroni</span>
-      </div>
-    </div>
-    <script src="/news/app_news.js" type="application/javascript"></script>
+        <div class="row">
+            <div class="text-left text-md-start">
+                <span class="copyright">Copyright &copy; Progetto Linguaggi e tecnologie per il web 2022
+                    Pilla-Pascucci-Cutroni</span>
+            </div>
+        </div>
+        <script src="/news/app_news.js" type="application/javascript"></script>
 </body>
+
 </html>

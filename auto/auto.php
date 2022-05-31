@@ -22,7 +22,7 @@
           <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
             <div class="navbar-nav">
               <a class="nav-link" href="../index.html">Home</a>
-              <a class="nav-link active" href="auto.html" aria-current="page">Le nostre auto</a>
+              <a class="nav-link active" href="#" aria-current="page">Le nostre auto</a>
               <a class="nav-link" href="../index.html">Incentivi</a>
             </div>
           <div class="collapse navbar-collapse justify-content-end" id="navbarNavAltMarkup">

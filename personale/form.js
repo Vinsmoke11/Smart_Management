@@ -20,14 +20,21 @@ function controlloTelefono(t) {
   }
   return true;
 }
+function controlloPassword(p){
+  if(p.length < 6){
+    alert("la password deve contenere almeno 6 caratteri");
+    return false;
+  }
+}
 function validaReg(){
   var p1 = document.regform.inputPassword.value
   var p2 = document.regform.inputPassword2.value
   var tel = document.regform.inputTelefono.value
   if(p1 != p2){
     alert('Le password inserite sono diverse!');
-    console.log(p1);
-    console.log(p2);
+    return false;
+  }
+  if(!controlloPassword(p)){
     return false;
   }
   if(!controlloTelefono(tel)){

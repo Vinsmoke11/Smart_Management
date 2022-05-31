@@ -4,7 +4,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Home Page</title>
+    <title>Green Vehicle Demand</title>
+    <link rel="icon" type="image/x-icon" href="./immagini/logo.png">
     <link rel="stylesheet" href="css/style.css">
     <link rel="stylesheet" href="css/bootstrap.css">
     <script src="bootstrap.min.js" type="application/javascript"></script>
@@ -15,7 +16,7 @@
     <!--Navbar-->
     <nav class="navbar navbar-expand-lg navbar-light bg-light sticky-top">
         <div class="container-fluid">
-            <img src="./immagini/logo.png" alt="" height="45px">
+            <img src="./immagini/logo.png" alt="" height="45px" hspace="10">
             <a class="navbar-brand" href="#">Green Vehicle Demand</a>
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup"
                 aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
@@ -25,7 +26,7 @@
                 <div class="navbar-nav">
                     <a class="nav-link active" aria-current="page" href="#">Home</a>
                     <a class="nav-link" href="auto/auto.php">Le nostre auto</a>
-                    <a class="nav-link" href="">Incentivi</a>
+                    <a class="nav-link" href="incentivi/incentivi.html">Incentivi</a>
                     <a class="nav-link" href="">Chi siamo?</a>
                 </div>
                 <div class="collapse navbar-collapse justify-content-end" id="navbarNavAltMarkup">
@@ -105,7 +106,7 @@
         </div>
     </div>
     <!-- Form Contattaci -->
-    <form id="contattaci" action="https://formspree.io/f/mayvvabv" enctype="text/plain" method="POST">
+    <form id="contattaci" action="" enctype="text/plain" method="POST">
         <div class="background">
             <div class="container">
                 <div class="screen">
@@ -137,10 +138,9 @@
                                     <input type="checkbox" class="checkbox" name="privacyCheck" id="privacyCheck"
                                         checked required>
                                     <label class="app-form-text-color" for="privacy">Accetto <a
-                                            title="Privacy e policy di Green Vehicle Demand" href="./form/privacy.html"
+                                            title="Privacy e policy di Green Vehicle Demand" href="privacy.html"
                                             target="_blank">Termini e condizioni</a></label><br>
                                 </div>
-
                                 <div class="app-form-group buttons">
                                     <button type="reset" class="app-form-button">Cancella</button>
                                     <button type="submit" class="app-form-button">Invia</button>
@@ -150,7 +150,9 @@
                     </div>
                 </div>
             </div>
+        </div>
     </form>
+    <hr>
     <!--Footer-->
     <div class="container mt-5 p-3">
         <div class="row">

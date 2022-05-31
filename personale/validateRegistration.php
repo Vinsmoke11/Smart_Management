@@ -17,7 +17,6 @@
 </head>
 <body>
     <?php
-        session_destroy();
         if($dbconn){
             $email = $_POST['inputEmail'];
             $q1="select * from utente where email= $1";
@@ -30,11 +29,11 @@
                 $nome = $_POST['inputNome'];
                 $cognome = $_POST['inputCognome'];
                 $telefono = $_POST['inputTelefono'];
-                $cap = $_POST['inputCAP'];
-                $password = $_POST['inputPassword'];
+                $regione = $_POST['inputRegione'];
+                $password = md5($_POST['inputPassword']);
                 $q2 = "insert into utente values ($1,$2,$3,$4,$5,$6)";
                 $data = pg_query_params($dbconn, $q2,
-                        array($email, $nome, $cognome,$telefono,$cap,$password));
+                        array($email,$nome,$cognome,$telefono,$regione,$password));
                 if ($data) {
                     session_start();
                     $_SESSION['logged'] = true;
@@ -42,7 +41,7 @@
                     $_SESSION['nome'] = $nome;
                     $_SESSION['cognome'] = $cognome;
                     $_SESSION['telefono'] = $telefono;
-                    $_SESSION['cap'] = $cap;
+                    $_SESSION['regione'] = $regione;
                     
                     header("Location: ./welcome.php?=$nome");
                 }

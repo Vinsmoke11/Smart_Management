@@ -17,7 +17,6 @@ else {
 </head>
 <body>
     <?php
-        session_destroy();
         if($dbconn){
             $email = $_POST['inputEmail'];
             $q1 = "select * from utente where email= $1";
@@ -29,7 +28,7 @@ else {
                     </a>";
             }
             else {
-                $password = $_POST['inputPassword'];
+                $password = md5($_POST['inputPassword']);
                 $q2 = "select * from utente where email = $1 and passwd = $2";
                 $result = pg_query_params($dbconn, $q2, array($email,$password));
                 if (!($line=pg_fetch_array($result, null, PGSQL_ASSOC))) {
@@ -38,13 +37,19 @@ else {
                     echo $password;
                 }
                 else {
-                    $username = $line['username'];
+                    $nome = $line['nome'];
+                    $cognome = $line['cognome'];
+                    $telefono = $line['telefono'];
+                    $regione = $line['regione'];
                     session_start();
-                    $_SESSION['email'] = $email;
-                    $_SESSION['username'] = $username;
                     $_SESSION['logged'] = true;
+                    $_SESSION['email'] = $email;
+                    $_SESSION['nome'] = $nome;
+                    $_SESSION['cognome'] = $cognome;
+                    $_SESSION['telefono'] = $telefono;
+                    $_SESSION['regione'] = $regione;
                     
-                    header("Location: ./welcome.php?=$username");
+                    header("Location: ./welcome.php?=$nome");
                 }
             }
         }

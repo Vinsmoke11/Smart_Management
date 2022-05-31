@@ -1,9 +1,18 @@
 .mainSection{
     background-image: url("https://wallpaper.dog/large/20429583.jpg");
     background-repeat: no-repeat;
-    background-attachment: fixed;
+    background-attachment: scroll;
     background-position: center center;
     background-size: cover;
+    height: 100vh;
+}
+.prevSection{
+    background-image: url("https://images2.alphacoders.com/107/thumb-1920-1077266.jpg");
+    background-repeat: no-repeat;
+    background-attachment: scroll;
+    background-position: center center;
+    background-size: cover;
+    height: 100vh;
 }
 .mainMenuBackground{
     background-image: url("https://i.pinimg.com/originals/52/fe/b6/52feb6ce0f78701667f41120b3cca0ea.jpg");
@@ -12,6 +21,7 @@
     background-position: center center;
     background-size: cover;
     min-height: 100vh;
+    max-width: 100vw;
 }
 .mylead {
     font-size: 30px;
@@ -91,5 +101,10 @@ a:hover {
     background-position: center center;
     background-size: cover;
     min-height: 100vh;
+}
+.mostra{
+    min-height: 150px;
+    min-width: 300px;
+    border: 2px solid rgb(214, 214, 214);
 }
 

@@ -1,3 +1,4 @@
+<?php session_start(); ?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -25,9 +26,18 @@
               <a class="nav-link" href="../index.html">Incentivi</a>
             </div>
           <div class="collapse navbar-collapse justify-content-end" id="navbarNavAltMarkup">
-            <div class="navbar-nav">
-                <a class="nav-link btn border-secondary" style="border-radius: 10px;" href="../personale/welcome.php">Area personale</a>
-            </div>
+            <?php
+            if(!$_SESSION['logged'] || !isset($_SESSION['logged'])){
+              echo "<div class='navbar-nav'>
+                    <a class='nav-link btn border-secondary' style='border-radius: 10px;' href='../personale/welcome.php'>Area personale</a>
+                    </div>";
+            }
+            else{
+              echo "<div class='navbar-nav'>
+                    <a class='nav-link btn border-secondary' style='border-radius: 10px;' href='../personale/welcome.php'>Ciao " . $_SESSION['nome'] . "</a>
+                    </div>";
+            }
+            ?>
           </div>
           </div>
         </div>
@@ -160,7 +170,7 @@
                               <li>Marca: <span class="lead">{{scopri.marca}}</span></li>
                               <li>Modello: <span class="lead">{{scopri.modello}}</span></li>
                               <li>Tipologia: <span class="lead">{{scopri.tipo}}</span></li>
-                              <li>Prezzo a partire da: <span class="lead">{{scopri.price}}</span></li>
+                              <li>Prezzo a partire da: €<span class="lead">{{scopri.price}}</span></li>
                               <li>Autonomia: <span class="lead">{{scopri.autonomia}} km</span></li>
                               <li>Numero di posti: <span class="lead">{{scopri.posti}}</span></li>
                               <li>Potenza: <span class="lead">{{scopri.potenza}}</span></li>
@@ -173,7 +183,19 @@
                           <p class="lead text-center mt-2">"{{scopri.descrizione}}"</p>
                       </div>
                     </div><hr>
-                    <button class="btn btn-success ms-2 mb-3" @click="showLess">Mostra meno</button>
+                    <div class="row">
+                      <button class="btn btn-success m-2 col-1" @click="showLess">Mostra meno</button>
+                      <div class="container-fluid text-end lead col">
+                        <?php
+                          if($_SESSION['logged']){
+                            echo "<a href='./preventivo.php' class='btn btn-outline-success btn-md'>Clicca qui</a> per scoprire il tuo preventivo personalizzato.";
+                          }
+                          else{
+                            echo "<a href='../personale/index.html' class='btn btn-outline-success btn-md'>Clicca qui</a> per accedere al tuo profilo.". $_SESSION['logged'];
+                          }
+                        ?>
+                      </div>
+                    </div>
                   </div>
                 </div>
               </div>

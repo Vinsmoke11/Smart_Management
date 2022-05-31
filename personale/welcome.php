@@ -13,6 +13,7 @@
     <link rel="stylesheet" href="../css/style.css">
     <link rel="stylesheet" href="../css/bootstrap.css">
     <script src="https://unpkg.com/vue@3"></script>
+    <script src="../bootstrap.min.js"></script>
     <title>Area Privata</title>
 </head>
 <body>
@@ -27,23 +28,57 @@
           <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
             <div class="navbar-nav">
               <a class="nav-link" href="../index.html">Home</a>
-              <a class="nav-link" href="../auto/auto.html">Le nostre auto</a>
-              <a class="nav-link active" href="#">Incentivi</a>
+              <a class="nav-link" href="../auto/auto.php">Le nostre auto</a>
+              <a class="nav-link" href="../index.html">Incentivi</a>
+              <a class="nav-link active" href="#">Area personale</a>
             </div>
           </div>
         </div>
     </nav>
     <section class="incentiviBackground" id="app">
         <div class="container container-md justify-content-center">
+          <div class="row">
+            <div class="col">
+              <hr>
             <?php
-                echo "<h1 class='lead' v-if='!sended' style='font-size: 32px;'>Benvenuto " .$_SESSION['username']. "</h1>"
+                echo "<h1 class='mt-4' style='font-size: 32px;'>Benvenuto " .$_SESSION['nome']." ".$_SESSION['cognome']. "</h1>"
             ?>
-            <form action="send.php" method="post" name="form" class="mt-4">
-                <input type="submit" value="Richiedi" class="mt-4">
-            </form>
-            <div name="msg" class="m-4">
-                <a href="./logout.php" class="btn btn-success btn-md">Logout</a>
-            </div>
+            <h2 class="mt-4" style='font-size: 26px;'>Il tuo profilo:</h2>
+            <table>
+              <tr>
+                <td class="p-3">Nome:  </td>
+                <td class="lead p-3"><?php echo $_SESSION['nome'];?></td>
+              </tr>
+              <tr>
+                <td class="p-3">Cognome:  </td>
+                <td class="lead p-3"><?php echo $_SESSION['cognome'];?></td>
+              </tr>
+              <tr>
+                <td class="p-3">E-mail:  </td>
+                <td class="lead p-3"><?php echo $_SESSION['email'];?></td>
+              </tr>
+              <tr>
+                <td class="p-3">Telefono:  </td>
+                <td class="lead p-3"><?php echo $_SESSION['telefono'];?></td>
+              </tr>
+              <tr>
+                <td class="p-3">Regione:  </td>
+                <td class="lead p-3"><?php echo $_SESSION['regione'];?></td>
+              </tr>
+            </table>
+            <h3 class="lead mt-4">Grazie per esserti unito a noi di Green Vehicle Demand...</h3>
+            <a href="./logout.php" class="btn btn-outline-success btn-md mt-5">Logout</a>
+          </div>
+          <div class="col">
+          <hr>
+            <h3 class="lead text-bold mt-3">...Ora puoi richiedere un preventivo personalizzato per l'auto che più ti piace!</h3>
+            <p class="lead mt-5 mb-2"><a href="../auto/auto.php" class="btn btn-success btn-sm">Clicca qui</a> per scegliere la tua prossima auto direttamente dal nostro catatlogo.</p>
+            <p class="lead mt-5 mb-2">Altrimenti, se già hai le idee chiare,</p>
+            <p class="lead mt-3 mb-2"> <a href="../auto/preventivo.php" class="btn btn-success btn-sm">Clicca qui</a> per richiedere un preventivo sulla base delle tue preferenze.</p>
+            <img src="https://beppegrillo.it/wp-content/uploads/2020/10/auto-elettrica.jpg" class="img-fluid" alt="../immagini/roadster.webp">
+          </div>
+          </div>
+          <hr>
         </div>
     </section>
     <div class="container mt-5 p-3">

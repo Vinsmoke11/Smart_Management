@@ -43,13 +43,13 @@
     </nav>
     <div class="prevSection">
       <div class="container container-lg">
-        <h2 class="text-light text-center pt-4" style="border-bottom: solid 1px #fff;">RICHIEDI UN PREVENTIVO PER LA TUA PROSSIMA AUTO</h2>
-        <p class="lead text-light">Il preventivo sarà calcolato in base alla regione inserita in fase di registrazione...</p>
+        <h2 class="text-dark text-center pt-4" style="border-bottom: solid 1px rgb(28, 28, 28);">RICHIEDI UN PREVENTIVO PER LA TUA PROSSIMA AUTO</h2>
+        <p class="lead text-dark">Il preventivo sarà calcolato in base alla regione inserita in fase di registrazione...</p>
         <?php
-          echo "<h3 class='text-light text-capitalize'>La tua regione: <span style='border-bottom: 1px solid #fff;' id='reg'>".$_SESSION['regione']."</span></h3>";
+          echo "<h3 class='text-dark text-capitalize'>La tua regione: <span style='border-bottom: 1px solid rgb(28, 28, 28);' id='reg'>".$_SESSION['regione']."</span></h3>";
         ?>
         <div class="btn-group">
-          <button type="button" id="menu" class="btn btn-danger dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false">
+          <button type="button" id="menu" class="btn btn-success dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false">
             Seleziona l'auto:
           </button>
           <ul class="dropdown-menu">
@@ -63,7 +63,7 @@
             <img :src="choosen.foto" alt="" class="mostra img-fluid mt-3">
           </div>
           <div class="col">
-            <table class="table table-dark table-hover mt-3" style='box-shadow: 2px 0px 4px #fff'>
+            <table class="table table-dark table-hover mt-3 mostra">
               <thead>
                 <tr>
                   <th scope='col'>
@@ -82,7 +82,7 @@
                   <td>{{regione}}</td>
                 </tr>
                 <tr>
-                  <th scope='row'><button class='btn btn-danger' @click='calcola'>CALCOLA</button></th>
+                  <th scope='row'><button class='btn btn-success' id="cal" @click='calcola'>CALCOLA</button></th>
                   <td class='text-decoration-line-through'><span v-if="calcolato">€{{choosen.price}}</span></td>
                 </tr>
                 <tr>
@@ -101,11 +101,11 @@
               <input type="text" name="oldprice" :value='choosen.price' style="display: none;">
               <input type="text" name="newprice" :value='this.newprice' style="display: none;">
               <input type="text" name="sconto" :value='this.sconto' style="display: none;">
-              <input type="submit" class='btn btn-danger' value="RICHIEDI">
+              <input type="submit" class='btn btn-success' value="RICHIEDI" id="ric">
             </form>
           </div>
         </div>
-        <div class='row mt-3' style="border-bottom: solid 1px #fff;"></div>
+        <div class='row mt-3' style="border-bottom: solid 1px rgb(28, 28, 28);"></div>
       </div>
     <script src="../bootstrap.bundle.min.js"></script>
     <script src="./app2.js"></script>

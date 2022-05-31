@@ -23,7 +23,7 @@
     $message .= "<h4>Prezzo standard: ".$oldprice."</h4>";
     $message .= "<h3>Prezzo dopo incentivi regionali: €".$newprice.",00</h3>";
     $message .= "<h4>Risparmio: €".$sconto.",00</h4>";
-    $message .= "<h4>La ringraziamo per aver scelto Green Vehicle Demad!</h4>";
+    $message .= "<h4>La ringraziamo per aver scelto Green Vehicle Demand!</h4>";
     $message .= "<a href='http://localhost:3000/index.html'>Clicca qui</a> per tornare sul nostro sito<br><hr>";
     $message .= "</body></html>";
 

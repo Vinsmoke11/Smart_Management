@@ -4,10 +4,9 @@
     background-attachment: scroll;
     background-position: center center;
     background-size: cover;
-    height: 100vh;
 }
 .prevSection{
-    background-image: url("https://images2.alphacoders.com/107/thumb-1920-1077266.jpg");
+    background-image: url("https://img.freepik.com/free-vector/green-curve-frame-template-vector_53876-144370.jpg?w=2000");
     background-repeat: no-repeat;
     background-attachment: scroll;
     background-position: center center;
@@ -138,7 +137,8 @@ a:hover {
 .mostra{
     min-height: 150px;
     min-width: 300px;
-    border: 2px solid rgb(214, 214, 214);
+    border-radius: 15px;
+    box-shadow: 2px 2px 8px rgb(28, 28, 28);
 }
 
 .carousel-item::before{
@@ -157,6 +157,7 @@ a:hover {
     width: 15px !important;
     border-radius: 50%;
 }
+<<<<<<< HEAD
 
 *, *:before, *:after {
     box-sizing: border-box;
@@ -346,3 +347,14 @@ a:hover {
     }
   }
   
+=======
+#ric:hover{
+    color: rgb(28, 28, 28);
+    box-shadow: 2px 2px 4px rgb(28, 28, 28);
+}
+
+#cal{
+    color: rgb(28, 28, 28);
+    box-shadow: 2px 2px 4px rgb(28, 28, 28);
+}
+>>>>>>> 0582215a8a3fe9697d15f88c2f878e20a5a8ac78

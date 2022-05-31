@@ -22,7 +22,7 @@
           <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
             <div class="navbar-nav">
               <a class="nav-link" href="../index.html">Home</a>
-              <a class="nav-link active" href="auto.html" aria-current="page">Le nostre auto</a>
+              <a class="nav-link active" href="#" aria-current="page">Le nostre auto</a>
               <a class="nav-link" href="../index.html">Incentivi</a>
             </div>
           <div class="collapse navbar-collapse justify-content-end" id="navbarNavAltMarkup">
@@ -107,7 +107,7 @@
               </div>
               <!--Menu auto-->
               <div class="col-md mainMenuBackground">
-                <div class="row justify-content-md-start justify-content-around">
+                <div class="row justify-content-md-start justify-content-center">
                   <button class="btn btn-success btn-sm m-2 ms-md-4 col-10 col-md-1" @click="this.navbaron = true" v-if="!navbaron && !show">Filtri</button>
                   <div class="btn-toolbar justify-content-center justify-content-lg-end col" role="toolbar" aria-label="Toolbar with button groups" v-if="!show">
                     <label class="lead mt-2">Ordina per: </label>

@@ -29,9 +29,23 @@
             <div class="navbar-nav">
               <a class="nav-link" href="../index.html">Home</a>
               <a class="nav-link" href="../auto/auto.php">Le nostre auto</a>
-              <a class="nav-link" href="../index.html">Incentivi</a>
-              <a class="nav-link active" href="#">Area personale</a>
+              <a class="nav-link" href="../incentivi/incentivi.html">Incentivi</a>
+              <a class="nav-link" href="../about-us/about-us.html">Chi siamo?</a>
             </div>
+          </div>
+          <div class="collapse navbar-collapse justify-content-end" id="navbarNavAltMarkup">
+            <?php
+            if(!$_SESSION['logged'] || !isset($_SESSION['logged'])){
+              echo "<div class='navbar-nav'>
+                    <a class='nav-link btn border-secondary' style='border-radius: 10px;' href='../personale/welcome.php'>Area personale</a>
+                    </div>";
+            }
+            else{
+              echo "<div class='navbar-nav'>
+                    <a class='nav-link btn border-secondary' style='border-radius: 10px;' href='../personale/welcome.php'>Ciao " . $_SESSION['nome'] . "</a>
+                    </div>";
+            }
+            ?>
           </div>
         </div>
     </nav>

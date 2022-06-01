@@ -157,7 +157,6 @@ a:hover {
     width: 15px !important;
     border-radius: 50%;
 }
-<<<<<<< HEAD
 
 *, *:before, *:after {
     box-sizing: border-box;
@@ -347,7 +346,6 @@ a:hover {
     }
   }
   
-=======
 #ric:hover{
     color: rgb(28, 28, 28);
     box-shadow: 2px 2px 4px rgb(28, 28, 28);
@@ -357,4 +355,3 @@ a:hover {
     color: rgb(28, 28, 28);
     box-shadow: 2px 2px 4px rgb(28, 28, 28);
 }
->>>>>>> 0582215a8a3fe9697d15f88c2f878e20a5a8ac78

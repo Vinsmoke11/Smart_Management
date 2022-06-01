@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="it">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Green Vehicle Demand</title>
+    <link rel="icon" type="image/x-icon" href="../immagini/logo.png">
+    <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="../css/bootstrap.css">
+    <link rel="stylesheet" href="./incentivi-style.css">
+    <script src="../bootstrap.min.js" type="application/javascript"></script>
+    <script src="https://unpkg.com/vue@3"></script>
+</head>
+
+<body>
+    <!--Navbar-->
+    <nav class="navbar navbar-expand-lg navbar-light bg-light sticky-top">
+        <div class="container-fluid">
+            <img src="../immagini/logo.png" alt="" height="45px" hspace="10">
+            <a class="navbar-brand" href="../index.html">Green Vehicle Demand</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup"
+                aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+                <div class="navbar-nav">
+                    <a class="nav-link active" aria-current="page" href="../index.html">Home</a>
+                    <a class="nav-link" href="../auto/auto.php">Le nostre auto</a>
+                    <a class="nav-link" href="../incentivi/incentivi.html">Incentivi</a>
+                    <a class="nav-link" href="../about-us/about-us.html">Chi siamo?</a>
+                </div>
+                <div class="collapse navbar-collapse justify-content-end" id="navbarNavAltMarkup">
+                    <div class="navbar-nav">
+                        <a class="nav-link btn border-secondary" style="border-radius: 10px;"
+                            href="../personale/welcome.php">Area personale</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </nav>
+    <!-- main -->
+    <main class="container" id="app">
+        <div class="row g-5">
+            <div class="align-content-center">
+                <img src="../immagini/faq-pic.png" class="img-fluid rounded">
+                <!-- Inizio articolo di Frequently Asked Questions -->
+                <div class="text-center mt-4 mb-2">
+                    <p class="h1">FAQ</p>
+                </div>
+                <p class="h3 titolo-articolo-incentivi">1. Quale iter seguono l’erogazione, il rimborso e il
+                    recupero dell’Ecobonus?</p>
+                <p class="text-justify testo-articolo-up-pic">
+                <ol class="list-group-flush">
+                    <p class="m-2">L’iter prevede queste quattro fasi:</p>
+
+                    <li class="list-unstylished"><b>Prenotazione</b>: il concessionario/rivenditore, una volta
+                        completata la registrazione
+                        alla piattaforma, procede con la prenotazione del contributo per ogni veicolo e, in base
+                        alla disponibilità del fondo, riceve conferma della prenotazione effettuata.</li>
+                    <li class="list-unstylished m-1"><b>Erogazione</b>: il concessionario/rivenditore riconosce al suo
+                        cliente il contributo
+                        tramite compensazione del prezzo di acquisto</li>
+                    <li class="list-unstylished m-1"><b>Rimborso</b>: il costruttore/importatore del veicolo rimborsa al
+                        concessionario/rivenditore il contributo erogato</li>
+                    <li class="list-unstylished m-1"><b>Recupero</b>: il costruttore/importatore del veicolo riceve dal
+                        concessionario/rivenditore tutta la documentazione utile per recuperare il contributo
+                        rimborsato sotto forma di credito d’imposta</li>
+                </ol>
+                </p>
+
+                <p class="h3 titolo-articolo-incentivi">2. Come si deve procedere per il recupero del contributo sotto
+                    forma di credito d’imposta?</p>
+                <p class="text-justify testo-articolo">
+                    Il costruttore/importatore deve prima di tutto adempiere a tutti gli obblighi previsti dall’art. 6
+                    del Decreto 20 marzo 2019, commi da 1 a 10.
+                    La richiesta di recupero si inoltra tramite un F24 compilato via telematica sui canali dell’Agenzia
+                    delle Entrate, a cui spetta il riconoscimento del credito di imposta.
+                </p>
+
+                <p class="h3 titolo-articolo-incentivi">3. Se una prenotazione del contributo non viene confermata per
+                    esaurimento dei fondi stanziati, resta valida la prelazione in caso di stanziamento di nuovi fondi?
+                </p>
+                <p class="text-justify testo-articolo">
+                    No, la lista d’attesa non è prevista. In questo caso, il concessionario/rivenditore può verificare
+                    nel tempo la disponibilità di contributi derivanti da eventuali annullamenti e procedere con una
+                    nuova prenotazione.
+                </p>
+
+                <p class="h3 titolo-articolo-incentivi">4. In fase di prenotazione cosa occorre scrivere nel campo
+                    “uso”?
+                </p>
+                <p class="text-justify testo-articolo">
+                    In questo campo della piattaforma si deve riportare quanto indicato sulla carta di circolazione nel
+                    rispetto dell’art. 82 Destinazione ed uso dei veicoli del "Nuovo codice della strada", Decreto
+                    Legislativo 30 aprile 1992 n. 285 e successive modifiche.
+                </p>
+
+                <p class="h3 titolo-articolo-incentivi">5. Il concessionario/rivenditore deve rispettare un limite
+                    giornaliero per le prenotazioni?
+                </p>
+                <p class="text-justify testo-articolo">
+                    No, non è previsto un numero massimo di prenotazioni al giorno.
+                </p>
+
+                <p class="h3 titolo-articolo-incentivi">6. C’è un limite di prenotazioni a nome di un acquirente di più
+                    veicoli di categoria Le?
+                </p>
+                <p class="text-justify testo-articolo">
+                    Per questa categoria di veicoli acquistati con i fondi stanziati dal DPCM 6/4/2022 non c’è alcun
+                    limite.
+                    Se i veicoli sono stati acquistati beneficiando del contributo Ecobonus ex lege n. 178/2020 il
+                    limite è di 500 veicoli all’anno.
+                    In caso di acquisti fatti da soggetti fra i quali sussiste il rapporto di controllo il limite è
+                    riferito al numero complessivo dei veicoli da essi acquistati nel corso dell’anno.
+                    Per rapporto di controllo si intende la presenza tra due o più società di un unico centro
+                    d'interessi, con direzione unitaria e con patrimoni destinati al conseguimento di una finalità
+                    comune.
+                </p>
+
+                <p class="h3 titolo-articolo-incentivi">7. Il concessionario/rivenditore deve rispettare un limite per
+                    l’annullamento delle prenotazioni effettuate?
+                </p>
+                <p class="text-justify testo-articolo">
+                    No, non è previsto un numero massimo di annullamenti
+                </p>
+
+                <p class="h3 titolo-articolo-incentivi">8. Cosa si intende per acconto?
+                </p>
+                <p class="text-justify testo-articolo">
+                    Per acconto s'intende qualsiasi forma di anticipazione del prezzo d'acquisto del veicolo purché
+                    documentata ed inserita in fase di prenotazione.
+
+                    Qualora l'anticipo sia versato ad un intermediario finanziario che lo incassa per conto del
+                    venditore è necessario allegare, oltre alla ricevuta del pagamento, anche il mandato che
+                    l'intermediario ha per conto del venditore.
+                </p>
+
+                <p class="h3 titolo-articolo-incentivi">9. L’acconto da versare è obbligatorio? Se ne può fare uno solo
+                    per più prenotazioni? È previsto un importo minimo?
+                </p>
+                <p class="text-justify testo-articolo">
+                    Sì, per tutte le categorie di veicoli (M1, N1, N2 e Le), al momento della prenotazione, si deve
+                    versare un acconto anche nel caso in cui l’acquisto preveda un finanziamento al 100%.
+
+                    Ad ogni prenotazione deve corrispondere il versamento di un acconto. Quindi non è ammesso il
+                    versamento di un unico acconto per più prenotazioni.
+
+                    Non è previsto un importo minimo.
+                </p>
+
+                <p class="h3 titolo-articolo-incentivi">10. Quali persone giuridiche possono acquistare beneficiando del
+                    contributo?
+                </p>
+                <p class="text-justify testo-articolo">
+                <ul class="list-unstylished m-1"> - quelle che svolgono attività di noleggio, acquistando veicoli di
+                    categoria M1 per l’impiego in car sharing;</ul>
+                <ul class="list-unstylished m-1"> - le PMI (Piccole Medie Imprese) che svolgono attività di trasporto in
+                    proprio o in conto terzi, acquistando veicoli di categoria N1 e N2.</ul>
+                </p>
+
+                <p class="h3 titolo-articolo-incentivi">11. In caso di acquisto cointestato, chi può chiedere il
+                    contributo?
+                </p>
+                <p class="text-justify testo-articolo">
+                    La procedura di prenotazione consente l’inserimento di un solo nominativo legato al veicolo. Questo
+                    dovrà corrispondere all’intestatario del veicolo registrato alla Motorizzazione Civile (e non al
+                    cointestatario). Se i dati non dovessero risultare identici, potrebbe venir meno il riconoscimento
+                    del contributo.
+                </p>
+            </div>
+        </div>
+    </main>
+
+    <!--Footer-->
+    <div class="container mt-5 p-3">
+        <div class="row">
+            <div class="text-left text-md-start">
+                <span class="copyright">Copyright &copy; Progetto Linguaggi e tecnologie per il web 2022
+                    Pilla-Pascucci-Cutroni</span>
+                <br />
+
+            </div>
+        </div>
+    </div>
+    <script src="/news/app_news.js" type="application/javascript"></script>
+</body>

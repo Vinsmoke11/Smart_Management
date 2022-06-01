@@ -150,7 +150,7 @@
                             </div>
                       </div>
                   </div>
-                  <div class="container" v-else="">
+                  <div v-else="">
                     <p class="lead mt-3 ms-2 text-sm">Scopri di più su {{scopri.marca}} {{scopri.modello}}:</p><hr>
                     <div class="container">
                       <div class="row">

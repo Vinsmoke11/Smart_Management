@@ -106,7 +106,7 @@
         </div>
     </div>
     <!-- Form Contattaci -->
-    <form id="contattaci" action="" enctype="text/plain" method="POST">
+    <form id="contattaci" action="contattaci.php" name="formcont" method="POST">
         <div class="background">
             <div class="container">
                 <div class="screen">
@@ -121,15 +121,14 @@
                             <div class="app-form">
                                 <div class="app-form-group">
                                     <input type="text" class="app-form-control" name="nome" placeholder="nome"
-                                        pattern="[a-Z]" required>
+                                         required>
                                 </div>
                                 <div class="app-form-group">
                                     <input type="email" class="app-form-control" name="email" placeholder="email"
                                         pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$" required>
                                 </div>
                                 <div class="app-form-group">
-                                    <input type="text" class="app-form-control" name="telefono" placeholder="telefono"
-                                        pattern="[0-9]{10}">
+                                    <input type="text" class="app-form-control" name="telefono" placeholder="telefono">
                                 </div>
                                 <div class="app-form-group message">
                                     <input class="app-form-control" name="messaggio" placeholder="messaggio" required>
@@ -143,7 +142,7 @@
                                 </div>
                                 <div class="app-form-group buttons">
                                     <button type="reset" class="app-form-button">Cancella</button>
-                                    <button type="submit" class="app-form-button">Invia</button>
+                                    <button type="submit" class="app-form-button" name="invia">Invia</button>
                                 </div>
                             </div>
                         </div>

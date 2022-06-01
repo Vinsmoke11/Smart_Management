@@ -1,4 +1,10 @@
-<?php session_start(); ?>
+<?php 
+  session_start();
+  if(!isset($_SESSION['logged']) || ($_SESSION['logged'] !== true)){
+    header("location: ../personale/index.html");
+    exit();
+  } 
+?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -23,6 +29,8 @@
               <a class="nav-link" href="../index.html">Home</a>
               <a class="nav-link" href="../auto/auto.php">Le nostre auto</a>
               <a class="nav-link active" href="#">Preventivo</a>
+              <a class="nav-link" href="../incentivi/incentivi.html">Incentivi</a>
+              <a class="nav-link" href="../about-us/about-us.html">Chi siamo?</a>
             </div>
             <div class="collapse navbar-collapse justify-content-end" id="navbarNavAltMarkup">
                 <?php

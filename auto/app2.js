@@ -254,7 +254,7 @@ let app2 = Vue.createApp({
         },
         calcola(){
             this.calcolato = true;
-            if(this.regione == 'Umbria'||this.regione == 'Lazio' ||this.regione == 'Marche'||this.regione == 'Abruzzo'){
+            if(this.regione != null){
                 this.sconto = this.choosen.prezzo * 10 / 100;
                 if(this.sconto > 8000){
                     this.sconto = 8000;

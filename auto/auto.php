@@ -23,7 +23,7 @@
             <div class="navbar-nav">
               <a class="nav-link" href="../index.html">Home</a>
               <a class="nav-link active" href="#" aria-current="page">Le nostre auto</a>
-              <a class="nav-link" href="../index.html">Incentivi</a>
+              <a class="nav-link" href="../incentivi/incentivi.html">Incentivi</a>
             </div>
           <div class="collapse navbar-collapse justify-content-end" id="navbarNavAltMarkup">
             <?php
@@ -150,7 +150,7 @@
                             </div>
                       </div>
                   </div>
-                  <div class="container" v-else="">
+                  <div v-else="">
                     <p class="lead mt-3 ms-2 text-sm">Scopri di più su {{scopri.marca}} {{scopri.modello}}:</p><hr>
                     <div class="container">
                       <div class="row">

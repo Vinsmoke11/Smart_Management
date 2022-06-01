@@ -48,7 +48,7 @@ const app = Vue.createApp ({
                 data:"25/05/2022",
                 descrizione:"Fisker ha annunciato  il progetto della GT quattro-posti Ronin, oltre al via alla produzione della compatta Pear. Per la prima, in fase di sviluppo nella nuova struttura “Magic Works” del Regno Unito, l’autonomia mostruosa dichiarata è di quasi mille km (600 miglia). La seconda arriverà sul mercato statunitense con meno di 30 mila dollari",
                 paragrafo:"Una decappottabile quattro posti completamente elettrica, che promette un’autonomia mostruosa di 965 km (600 miglia). L’Ev di Fisker si chiama Ronin e presto avrà la sua realizzazione, dopo che lo scorso 5 maggio, sul profilo ufficiale della casa Usa, ne è stato annunciato il progetto. La vettura sarà a quattro porte. Al momento, però, non si sa ancora nulla riguardo alla potenza, seppur la società abbia rivelato che il modello green avrà un powertrain di tre motori e sarà in grado di fare gli 0-100 km/h in meno di due secondi.",
-                titolo2:"la Ronin sarà svelata ad Agosto",
+                titolo2:"La Ronin sarà svelata ad Agosto",
                 paragrafo2:"Il dato sull’autonomia è quello che impressiona di più, e in attesa di avere conferma su tale valore, nel suo tweet Fisker ha parlato di “GT progettata per offrire l’autonomia più lunga al mondo, per un veicolo elettrico di serie al massimo delle prestazioni”. La Ronin verrà svelata ad agosto 2023, ed entrerà in produzione nella seconda metà del 2024. È il terzo progetto dopo il Suv Ocean e la compatta Pear, legata alla mobilità urbana.",
                 foto:"https://cdn.motor1.com/images/mgl/6ZZz27/s1/henrik-fisker-ronin-teaser.jpg",
                 alt:"La Fisker Ronin è una cabriolet quattro posti e quattro porte",

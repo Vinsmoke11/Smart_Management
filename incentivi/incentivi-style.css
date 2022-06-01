@@ -30,3 +30,13 @@
     color:#393939;
     margin-bottom: 3rem;
 }
+
+
+.contenitore .contenuto{
+	max-width:1200px;
+	margin:auto;
+	padding: 70px 10px;
+	padding-bottom: 70px;
+}
+
+	

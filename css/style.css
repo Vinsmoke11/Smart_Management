@@ -355,3 +355,62 @@ a:hover {
     color: rgb(28, 28, 28);
     box-shadow: 2px 2px 4px rgb(28, 28, 28);
 }
+
+footer{
+	margin-top: 5rem;
+	text-align:center;
+	padding:30px 10px;
+	line-height: 1.6em;
+	font-size:0.8em;
+	background-color: #708f70;
+	color: #fff;
+}
+
+footer a{
+	color:#384638; 
+}
+
+footer a:hover{
+	color:#384638; 
+}
+
+footer .credits {
+	max-width:300px;
+	margin:auto;
+}
+
+footer .credits a img {
+  -o-transition: opacity .2 ease-in;
+  -ms-transition: opacity .2s ease-in;
+  -moz-transition: opacity .2s ease-in;
+  -webkit-transition: opacity .2s ease-in;
+  transition: opacity .2s ease
+}
+
+footer .credits a img:hover {
+	opacity:0.6;
+}
+
+footer .social-cont .social-list {
+	list-style-type: none;
+	margin: 0 auto;
+	padding: 10px 0;
+}
+
+footer .social-cont .social-list > li {
+	margin: 8px 8px 8px 0;
+	display: inline-block;
+	vertical-align: top;
+	height: 32px;
+	width: 32px;
+	border-radius: 6em;
+	background-color:#addfad; 
+}
+
+footer .social-cont .social-list li img {
+	width: 32px
+}
+
+footer .social-cont .social-list > li:hover {
+background:#384638; /* light seconday color*/		
+}

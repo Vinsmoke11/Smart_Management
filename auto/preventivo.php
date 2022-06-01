@@ -1,4 +1,10 @@
-<?php session_start(); ?>
+<?php 
+  session_start();
+  if(!isset($_SESSION['logged']) || ($_SESSION['logged'] !== true)){
+    header("location: ./index.html");
+    exit();
+  } 
+?>
 <!DOCTYPE html>
 <html lang="en">
 <head>

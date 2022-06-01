@@ -184,7 +184,9 @@
                       </div>
                     </div><hr>
                     <div class="row">
-                      <button class="btn btn-success m-2 col-1" @click="showLess">Mostra meno</button>
+                      <div class="col">
+                        <button class="btn btn-success m-2" @click="showLess">Mostra meno</button>
+                      </div>
                       <div class="container-fluid text-end lead col">
                         <?php
                           if($_SESSION['logged']){

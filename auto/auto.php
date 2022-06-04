@@ -124,7 +124,7 @@
                       <div class="alert alert-danger" role="alert">
                         Siamo spiacenti... 
                         <div>
-                          <a href="./auto.html" class="alert-link">Indietro</a>
+                          <a href="./auto.php" class="alert-link">Indietro</a>
                         </div>
                       </div>
                       <p class="lead ms-3"><strong>Per ora non sono presenti nel nostro sito auto corrispondenti ai criteri inseriti:</p></strong>

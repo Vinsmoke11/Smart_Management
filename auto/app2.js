@@ -241,14 +241,16 @@ let app2 = Vue.createApp({
             calcolato : false,
             regione : null,
             sconto : 0,
-            newprice : null
+            newprice : null,
+            statale : null
         }
     },
     methods: {
         scelta(a){
             this.choosen = a;
             this.calcolato = false;
-            this.sconto
+            this.sconto = null;
+            this.statale = null;
             document.getElementById("menu").innerHTML = "Modifica scelta:";
             this.regione = document.getElementById('reg').innerHTML;
         },
@@ -260,7 +262,14 @@ let app2 = Vue.createApp({
                     this.sconto = 8000;
                 }
             }
-            this.newprice = this.choosen.prezzo - this.sconto;
+            if(this.choosen.prezzo <= 42500){
+                this.statale = 3000;
+                this.newprice = this.choosen.prezzo - this.sconto - this.statale;
+                this.sconto += this.statale;
+            }
+            else{
+                this.newprice = this.choosen.prezzo - this.sconto;
+            }
             return this.newprice
         }
     }

@@ -98,6 +98,10 @@
                   <td><span v-if="calcolato">Risparmio: €{{sconto}},00</span></td>
                 </tr>
                 <tr>
+                  <th scope='row'><span v-if="calcolato">Incentivo statale (per auto con prezzo entro €42.500,00):</span></th>
+                  <td><span v-if="calcolato && statale != null">€{{this.statale}},00</span></td>
+                </tr>
+                <tr>
                   <th scope='row'><span class='lead text-uppercase text-center' v-if="calcolato">Clicca qui sotto per ricevere il preventivo generato direttamente sulla tua mail!</span></th>
                   <td></td>
                 </tr>

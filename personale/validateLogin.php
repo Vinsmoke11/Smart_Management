@@ -34,7 +34,6 @@ else {
                 if (!($line=pg_fetch_array($result, null, PGSQL_ASSOC))) {
                     echo "<h1> The password is erroneous</h1>
                         <a href='./index.html'> Click here to login </a>";
-                    echo $password;
                 }
                 else {
                     $nome = $line['nome'];
